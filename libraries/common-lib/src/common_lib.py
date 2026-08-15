@@ -1,10 +1,20 @@
-class ParseError(Exception):
-    pass
+from dataclasses import dataclass
 
 
-def parse_record(text: str, strict: bool = False):
+@dataclass(frozen=True)
+class ParseIssue:
+    message: str
+
+
+@dataclass(frozen=True)
+class ParseResult:
+    value: dict | None
+    errors: list[ParseIssue]
+
+
+def parse_record(text: str, mode: str = "strict") -> ParseResult:
+    if mode not in {"strict", "lenient"}:
+        raise ValueError("mode must be strict or lenient")
     if not text or text.startswith("!"):
-        if strict:
-            raise ParseError("invalid record")
-        return None
-    return {"text": text}
+        return ParseResult(value=None, errors=[ParseIssue("invalid record")])
+    return ParseResult(value={"text": text}, errors=[])

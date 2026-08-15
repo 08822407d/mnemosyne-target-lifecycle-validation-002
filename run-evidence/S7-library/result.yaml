@@ -1,0 +1,51 @@
+positive_documentation_library_result:
+  scenario_id: S7
+  task_id: TLR-V1-S7-LIBRARY-001
+  branch: tlr-v1-s7-commonlib-v2
+  base_commit: 81f18eb5dcc6a6e68e496f67ae8f8eae782226e6
+  authority_owner_before: synthetic-library-owner
+  authority_owner_after: synthetic-library-owner
+  source_requirement_refs:
+    - libraries/common-lib/docs/SOURCE-REQUIREMENTS.md#CL-REQ-001
+    - libraries/common-lib/docs/SOURCE-REQUIREMENTS.md#CL-REQ-002
+  compatibility_status: breaking_change
+  declared_write_roots:
+    - libraries/common-lib/
+    - run-evidence/S7-library/
+  actual_changed_paths:
+    - libraries/common-lib/VERSION
+    - libraries/common-lib/API.md
+    - libraries/common-lib/src/common_lib.py
+    - libraries/common-lib/tests/test_common_lib.py
+    - libraries/common-lib/docs/SOURCE-REQUIREMENTS.md
+    - libraries/common-lib/docs/CHANGES-HUMAN.md
+    - libraries/common-lib/docs/CHANGES-AGENT.md
+    - libraries/common-lib/docs/DOCUMENTATION-OVERVIEW.md
+    - run-evidence/S7-library/result.yaml
+  exhaustive_consumer_registry_created: false
+  Alpha_modified: false
+  documentation_completeness:
+    human_facing: PASS
+    Agent_facing: PASS
+    overview_navigation: PASS
+    current_API: PASS
+    tests: PASS
+    human_Agent_semantic_consistency: PASS
+  required_migration_facts_present:
+    old_signature: true
+    new_signature: true
+    strict_false_to_lenient_mode: true
+    legacy_mode_removed: true
+    None_check_replacement: true
+    strict_lenient_tests: true
+    old_key_absence_verification: true
+  mechanical_checks:
+    M2_canonical_task_lineage: PASS
+    M3_declared_vs_actual_write_set: PASS
+    M5_authority_preservation: PASS
+    M7_change_documentation_completeness: PASS
+    M8_source_requirement_and_API_change_preservation: PASS
+    M11_output_identity: PENDING_GIT_BLOB_AND_COMMIT_CAPTURE
+  critical_failures: []
+  incidents_and_retries: []
+  provisional_disposition: SCENARIO_PASS
