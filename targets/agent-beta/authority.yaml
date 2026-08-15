@@ -1,0 +1,4 @@
+target_id: agent-beta
+authority_owner: synthetic-beta-owner
+canonical_truth_root: targets/agent-beta/
+standing_writers: []

@@ -1,0 +1,4 @@
+target_id: common-lib
+authority_owner: synthetic-library-owner
+canonical_truth_root: libraries/common-lib/
+standing_writers: []

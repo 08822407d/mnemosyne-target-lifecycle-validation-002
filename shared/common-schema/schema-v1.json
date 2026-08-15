@@ -1,0 +1,6 @@
+{
+  "$id": "synthetic-common-schema-v1",
+  "version": 1,
+  "required": ["id"],
+  "properties": {"id": {"type": "string"}}
+}

@@ -1,0 +1,5 @@
+{
+  "generated": true,
+  "targets": ["agent-alpha", "agent-beta"],
+  "warning": "repository-global generated fixture object; not in target-local task write sets"
+}

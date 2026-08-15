@@ -1,0 +1,4 @@
+fixture_tooling:
+  deterministic_tests: true
+  repository_global: true
+  scenario_tasks_may_modify_only_if_explicitly_authorized: true

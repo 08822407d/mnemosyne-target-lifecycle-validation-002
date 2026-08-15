@@ -1,0 +1,11 @@
+fixture_id: TLR-V02-SYNTHETIC-001
+fixture_version: 0.1.0
+material_class: public_synthetic_only
+contains_private_or_real_material: false
+contains_credentials_or_secrets: false
+commonlib_version: 1.0.0
+alpha_uses_commonlib: true
+beta_uses_commonlib: false
+common_schema_version: 1
+S7_v2_sufficient_guide_present: false
+S8_expected_answer_present: false

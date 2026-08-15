@@ -1,0 +1,5 @@
+dependencies:
+  common-schema:
+    version: 1
+  common-lib:
+    used: false

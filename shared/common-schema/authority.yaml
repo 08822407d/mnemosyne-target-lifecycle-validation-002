@@ -1,0 +1,4 @@
+object_id: common-schema
+authority_owner: synthetic-shared-owner
+canonical_path: shared/common-schema/
+dependent_targets: [agent-alpha, agent-beta]
