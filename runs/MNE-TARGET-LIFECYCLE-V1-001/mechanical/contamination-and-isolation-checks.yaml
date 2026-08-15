@@ -1,0 +1,64 @@
+contamination_and_isolation_checks:
+  run_id: MNE-TARGET-LIFECYCLE-V1-001
+  S8:
+    branch: tlr-v1-s8-insufficient-docs
+    fixture_base: 81f18eb5dcc6a6e68e496f67ae8f8eae782226e6
+    prepared_head: 061779c317fd6bba3f43a1a9be5db86cd8b0dca0
+    worker_final_head: d9c4c88aa17d6edf73955054833bd2738709aec9
+    S7_library_head: 9cfae2953fa8d7b2ff4ab2e14abab263891932de
+    S7_vs_S8_relation_before_worker: diverged
+    S7_vs_S8_merge_base: 81f18eb5dcc6a6e68e496f67ae8f8eae782226e6
+    S7_commits_are_S8_ancestors: false
+    prepared_branch_changed_paths:
+      - libraries/common-lib/VERSION
+      - libraries/common-lib/docs/CHANGES-HUMAN.md
+      - run-evidence/S8/input/authorization-receipt.yaml
+      - run-evidence/S8/input/isolation-receipt.yaml
+      - run-evidence/S8/input/source-inventory.yaml
+      - run-evidence/S8/input/worker-task.md
+    sufficient_Agent_guide_present: false
+    CommonLib_v2_API_source_tests_present: false
+    concrete_hidden_migration_facts_in_worker_packet: false
+    sanitized_input_blobs:
+      authorization_receipt: 71b5fca1fdbbbf4be6e09998c5fd2a96978b4dd4
+      isolation_receipt: a559c7feb10c3430eb21312f35a4ad280cff4df0
+      source_inventory: 3e2fbddb9280a31b228b7a4b64ebc56b2919e803
+      worker_task: f67a8da0fd220648a9b881811e82ee35c3d13c98
+      human_change_note: 1d34cc0025a25d736e8fb99d5b6af06999bed6c0
+      version_marker: 227cea215648b1af34a87c9acf5b707fe02d2072
+    conversation_freshness:
+      operator_returned_result_from_separate_new_chat: true
+      worker_attested_new_conversation: true
+      Execute_transcript_received: false
+      S7_output_received: false
+      hidden_answers_received: false
+      visible_selection_verbatim: GPT-5.6 Sol
+      evidence_limit: separate_chat_connector_call_log_is_not_available_to_this_controller; preserved worker report and Owner-supplied return are the direct context evidence
+    worker_forbidden_read_report:
+      broad_search: false
+      other_branch: false
+      Git_history: false
+      S7: false
+      sufficient_Agent_guide: false
+      CommonLib_v2_API_source_tests: false
+      frozen_concrete_contract: false
+      external_contract_inference: false
+    worker_diff:
+      base: 061779c317fd6bba3f43a1a9be5db86cd8b0dca0
+      head: d9c4c88aa17d6edf73955054833bd2738709aec9
+      changed_paths:
+        - run-evidence/S8/output/negative-documentation-assessment.yaml
+      output_blob: ffe9056797812d18c198682fb022749da466d421
+      Alpha_changed: false
+      prohibited_roots_changed: []
+    supplied_information_assessment: INSUFFICIENT_FOR_SAFE_MIGRATION
+    concrete_hidden_contract_claims: []
+    reasonable_contamination_exclusion: PASS_WITH_OPERATOR_AND_WORKER_ATTESTATION
+    mechanical_disposition: PASS
+  other_cross_cell_contamination:
+    core_received_S7_or_S8_worker_output: false
+    S7_received_S8_worker_output: false
+    S11_semantically_depended_on_other_scenarios: false
+    findings: []
+  limitations:
+    - fresh-chat state is supported by Owner/worker attestation and branch/input isolation; exact hidden model backend and complete cross-chat connector action telemetry are not attestable here
