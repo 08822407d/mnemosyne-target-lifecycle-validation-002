@@ -1,0 +1,103 @@
+validation_run_manifest:
+  run_id: MNE-TARGET-LIFECYCLE-V0-001
+  package_id: MNE-TARGET-LIFECYCLE-VALIDATION-PACKAGE-002
+  package_version: 0.2.0
+  candidate_id: MNEMOSYNE-TARGET-AGENT-CONTAINER-EVOLUTION-DEPENDENCY-002
+  validation_id: MNEMOSYNE-TARGET-AGENT-CONTAINER-EVOLUTION-DEPENDENCY-VALIDATION-002
+
+  authorization:
+    disposition: RUN
+    phase_scope: V0_ONLY
+    decision_ref: MNE-TARGET-LIFECYCLE-V0-RUN-AUTHORIZATION-001
+    allowed_actions:
+      - read_merged_Mnemosyne_package_inputs
+      - write_only_synthetic_repository_within_V0_scope
+      - run_repository_ref_path_diff_schema_hash_identity_checks
+      - run_real_repository_no_write_before_after_checks
+      - preserve_complete_V0_bundle
+    prohibited_actions:
+      - run_V1_or_S1_through_S11
+      - write_08822407d_Mnemosyne
+      - write_08822407d_Meta_Agent
+      - write_any_real_business_or_language_learning_target
+      - use_private_or_real_target_material
+      - use_web_research_Deep_Research_or_Fable
+      - use_external_quota
+      - ingest_raw_results_into_Mnemosyne
+      - modify_candidate_validation_or_execution_source
+    expires_with_run: true
+    not_future_precedent: true
+
+  date_or_window:
+    started_at: 2026-08-15
+    completed_at: null
+
+  execution:
+    actor: ChatGPT
+    actor_kind: agent
+    product_surface: standard_ChatGPT_conversation_with_GitHub_connector
+    visible_selection_verbatim: gpt-5.6 sol extra high
+    reasoning_setting_verbatim: not_separately_reported_by_Owner; preserved_inside_combined_visible_selection_verbatim
+    backend:
+      status: unknown_or_not_attestable
+      reason: consumer ChatGPT visible selection is operator-reported UI evidence and does not attest the exact served backend
+    switch_history:
+      status: unknown
+      evidence:
+        - class: operator_reported
+          ref: current_conversation_owner_message_before_V0
+          claim_scope: current_visible_selection_verbatim
+          detail: gpt-5.6 sol extra high
+
+  repository:
+    full_name_or_store: 08822407d/mnemosyne-target-lifecycle-validation-002
+    visibility: public
+    default_branch: master
+    prewrite_state: empty_repository_no_commit
+    pinned_base_sha: f609ea06f744e529cbe88fd2a6199629361dcb32
+    pinned_base_semantics: first_non_substantive_V0_receive_commit_after_empty_repository_initialization
+    fixture_commit: null
+    allowed_write_roots:
+      - runs/MNE-TARGET-LIFECYCLE-V0-001/
+    prohibited_repositories:
+      - 08822407d/Mnemosyne
+      - 08822407d/Meta-Agent
+      - any_real_business_target
+      - any_real_language_learning_target
+    retention_plan: retain_through_V0_review_and_any_later_selected_V1_dependency_then_separately_decide_archive_or_delete
+
+  material_safety:
+    class: public_synthetic_only
+    real_target_material_present: false
+    private_material_present: false
+    credentials_present: false
+    review_ref: runs/MNE-TARGET-LIFECYCLE-V0-001/01-package-integrity-receipt.yaml
+
+  phases:
+    V0:
+      authorized: true
+      executed: in_progress
+      result: pending
+    V1:
+      authorized: false
+      executed: false
+      selected_scenarios: []
+      result: not_authorized
+
+  artifacts:
+    - ref: runs/MNE-TARGET-LIFECYCLE-V0-001/00-validation-package-receive.yaml
+      relation: produced
+      immutable_identity:
+        type: git_commit_sha
+        value: f609ea06f744e529cbe88fd2a6199629361dcb32
+    - ref: runs/MNE-TARGET-LIFECYCLE-V0-001/01-package-integrity-receipt.yaml
+      relation: produced
+      immutable_identity:
+        type: git_commit_sha
+        value: d12666149c5ba0f9377b0caef63fd2b3ac41550e
+
+  limitations:
+    - repository_was_created_empty_so_no_prewrite_commit_SHA_existed; first V0 receive commit is used as the pinned comparison baseline
+    - no exact full-name real business or language-learning repositories were listed in the run authorization; no such repositories are accessed in V0
+    - exact served backend identity is not attestable
+  omissions: []
