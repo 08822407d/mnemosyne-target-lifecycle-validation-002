@@ -1,0 +1,16 @@
+S11_source_receipt:
+  source_repository: 08822407d/mnemosyne-target-lifecycle-validation-002
+  source_branch: tlr-v1-fixture-base
+  source_commit: 81f18eb5dcc6a6e68e496f67ae8f8eae782226e6
+  source_tree: f1e221ce8aef404579b96adb3ab01319016889db
+  source_target_root: targets/agent-alpha/
+  source_target_tree_identity: 05f9acdb82521a2d72a93b4271115c444477e853
+  authority_owner: synthetic-alpha-owner
+  required_restore_records:
+    - authority.yaml
+    - current.md
+    - requirements/
+    - src/
+    - tests/
+    - dependencies.yaml
+  prohibited_independent_writers: [backup-a, backup-b]
