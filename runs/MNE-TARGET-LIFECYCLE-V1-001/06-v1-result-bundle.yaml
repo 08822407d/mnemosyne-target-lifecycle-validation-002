@@ -1,0 +1,158 @@
+validation_result_bundle:
+  result_id: MNE-TARGET-LIFECYCLE-V1-RESULT-001
+  run_id: MNE-TARGET-LIFECYCLE-V1-001
+  package_id: MNE-TARGET-LIFECYCLE-VALIDATION-PACKAGE-002
+  candidate_id: MNEMOSYNE-TARGET-AGENT-CONTAINER-EVOLUTION-DEPENDENCY-002
+  validation_id: MNEMOSYNE-TARGET-AGENT-CONTAINER-EVOLUTION-DEPENDENCY-VALIDATION-002
+  execution_package_id: MNE-TARGET-LIFECYCLE-V1-EXECUTION-PACKAGE-001
+
+  run_manifest_ref:
+    path: runs/MNE-TARGET-LIFECYCLE-V1-001/04-run-manifest.yaml
+    blob: 5d8644eca5a864c648ac4d3e80f4dbca9047a027
+  V0_adjudication_ref:
+    repository: 08822407d/Mnemosyne
+    commit: 1a61414bbe86a9a1b2a37c2ae1d22caf21c39dea
+    path: notes/validation-adjudications/MNE-TARGET-LIFECYCLE-V0-ADJUDICATION-001.md
+    blob: 6caf5f67cdc3e210e009f442b257f02cfc3d70f8
+  V1_authorization_ref:
+    repository: 08822407d/Mnemosyne
+    commit: 1a61414bbe86a9a1b2a37c2ae1d22caf21c39dea
+    path: notes/validation-run-decisions/MNE-TARGET-LIFECYCLE-V1-RUN-AUTHORIZATION-001.md
+    blob: 361b3d110f41f53098ccbd6f8705c494fc2df0b6
+  fixture_ref:
+    branch: tlr-v1-fixture-base
+    commit: 81f18eb5dcc6a6e68e496f67ae8f8eae782226e6
+    tree: f1e221ce8aef404579b96adb3ab01319016889db
+  controller_ref:
+    branch: tlr-v1-controller
+    head_before_bundle_write: 5db6b2aac6a9e83e06569e24a92bd411a56e44c5
+
+  selected_scenarios: [S1,S2,S3,S4,S5,S6,S7,S8,S9,S11]
+  unselected_scenarios: [S10]
+  V2_authorized: false
+
+  cell_result_refs:
+    - {cell: core, path: runs/MNE-TARGET-LIFECYCLE-V1-001/cells/core-cell-result.yaml, blob: 7fbda83c0fd8f6b7868d84f835bfda46a384e98b}
+    - {cell: S7, path: runs/MNE-TARGET-LIFECYCLE-V1-001/cells/s7-positive-cell-result.yaml, blob: 843ed26ace895c7bcf7cb869b3dd15233e869755}
+    - {cell: S8, path: runs/MNE-TARGET-LIFECYCLE-V1-001/cells/s8-negative-cell-result.yaml, blob: 1f99bfd71caaa88c16c2f46c577141f8a3dfed53}
+    - {cell: S11, path: runs/MNE-TARGET-LIFECYCLE-V1-001/cells/s11-backup-cell-result.yaml, blob: 0e252cfbda93d4da71dbff3afa8befa490fb40a5}
+
+  scenario_attempt_refs:
+    - {scenario: S1, branch: tlr-v1-s1-destination-block, head: d20f1239784f88072399a3c874800f6c94c0ad2c, result_blob: 242447565024e465fa9c7717d7cf3520f364f5d0}
+    - {scenario: S2, branch: tlr-v1-s2-bounded-writer, head: b0923aedf551262f0b24409611824c526252982f, result_blob: 0d20f7296a488b829f3cd393cde9fd32a2556cd5}
+    - {scenario: S3_alpha, branch: tlr-v1-s3-alpha, head: 1a8496893260f35b0b06d32d6b2128a192489ae7, result_blob: 73951924bcfdc4979e49113dd1b9f865a2bab7ac}
+    - {scenario: S3_beta, branch: tlr-v1-s3-beta, head: 9a77045e77856a25336a664840aeaa984cdb8886, result_blob: b3fe2e89119bf2bede9866e6e260d52516f720f0}
+    - {scenario: S4_shared, branch: tlr-v1-s4-shared-schema, head: 2aa6c0a8a7ac39ab1d3e06a64006e83aff20b5aa, result_blob: ff04856f6091f074448307d21b9508351e74dea2}
+    - {scenario: S4_dependent, branch: tlr-v1-s4-alpha-dependent, head: 4861cc27e8960353f29af9ca5cfa0927430b89ad, result_blob: 97064b6a9d77f0f44b92a8d9bf238d9c80609afc}
+    - {scenario: S4_unknown, branch: tlr-v1-s4-unknown-global, head: c77f20f0320313d1ccb2b4d1272dfa0daba8ef77, result_blob: 09579f40e5a16d36f8397ab38b4220a68ae89286}
+    - {scenario: S5, branch: tlr-v1-s5-upstream-proposal, head: 8bfd56e5800566b048702d8b8a89e3bd05f9e6e9, result_blob: 71e889f4cdb94bd38dfc8be8825e2a21cf1c9422}
+    - {scenario: S6, branch: tlr-v1-s6-beta-requirement, head: e90fcc6633bae50236aa96f9c499ba6c7379f53f, result_blob: 140f79f262ae841d04b29576855f99c350a82da4}
+    - {scenario: S7_library, branch: tlr-v1-s7-commonlib-v2, head: 9cfae2953fa8d7b2ff4ab2e14abab263891932de, result_blob: 088cfa3b05c6f622d2549c2cc7aebe0bfe4027e7}
+    - {scenario: S7_alpha, branch: tlr-v1-s7-alpha-migration, head: be627df6a1e633e8c93f25c056b643b603f1aea8, result_blob: e5424a1294d565f026f26e46b11fd907879b39cf}
+    - {scenario: S8, branch: tlr-v1-s8-insufficient-docs, head: d9c4c88aa17d6edf73955054833bd2738709aec9, result_blob: ffe9056797812d18c198682fb022749da466d421}
+    - {scenario: S9, branch: tlr-v1-s9-imperfect-route, head: b16a458339497425387d71c843388ef30aa2eb46, result_blob: 605e3f916e03f4f82fdeeb515b53fc16e3d4d006}
+    - {scenario: S11, branch: tlr-v1-s11-backup-restore, head: 47262b6bf8f89c9ac13d7f488595f8adff250299, result_blob: 258b852b728d11f7a0d09aadd5aa8903e51e428f}
+
+  task_contract_refs:
+    - {path: runs/MNE-TARGET-LIFECYCLE-V1-001/02-branch-and-task-map.yaml, blob: e49501f4b950475ac429adbf5df8f349d237abc0}
+    - {path: runs/MNE-TARGET-LIFECYCLE-V1-001/mechanical/declared-vs-actual-write-sets.yaml, blob: cac1940f922726b7d8cd77f8eb3463bc43715208}
+  branch_and_output_identity_refs:
+    - {path: runs/MNE-TARGET-LIFECYCLE-V1-001/mechanical/branch-and-output-identities.yaml, blob: b881836d1a6dd7b7d2f748ad082048219b6d8337}
+  declared_actual_write_set_ref:
+    path: runs/MNE-TARGET-LIFECYCLE-V1-001/mechanical/declared-vs-actual-write-sets.yaml
+    blob: cac1940f922726b7d8cd77f8eb3463bc43715208
+  S8_isolation_and_contamination_ref:
+    path: runs/MNE-TARGET-LIFECYCLE-V1-001/mechanical/contamination-and-isolation-checks.yaml
+    blob: c379ab4144c2bb029e01e0c0d18382e4f06c5233
+  no_write_proof_ref:
+    path: runs/MNE-TARGET-LIFECYCLE-V1-001/mechanical/final-no-write-proof.yaml
+    blob: 682fad9e71122c2f83e697c7f09f9532f76c5724
+  backup_restore_ref:
+    path: runs/MNE-TARGET-LIFECYCLE-V1-001/cells/s11-backup-cell-result.yaml
+    blob: 0e252cfbda93d4da71dbff3afa8befa490fb40a5
+  mechanical_summary_ref:
+    path: runs/MNE-TARGET-LIFECYCLE-V1-001/mechanical/M0-M11-summary.yaml
+    blob: 65fde802e6c02879237ea594b1eb37dbad691964
+  incident_refs:
+    - {path: runs/MNE-TARGET-LIFECYCLE-V1-001/incidents/incident-ledger.yaml, blob: 837955570511ed77529497dfdbfa2782e17fe40c}
+
+  scenario_summary:
+    passed: [S1,S2,S3,S4,S5,S6,S7,S8,S9,S11]
+    passed_with_observation: []
+    candidate_or_semantic_failures: []
+    executor_failures: []
+    blocked: []
+    invalid: []
+    status: provisional_executor_dispositions_only_pending_fresh_Pro
+
+  critical_blockers: []
+  candidate_defects: []
+  validation_protocol_defects: []
+  executor_defects: []
+  disputed_items:
+    - id: V1-PROTOCOL-DISCREPANCY-001
+      subject: fixture_root_README_write_allowlist
+      evidence: same execution-package fixture contract requires root README.md in the frozen fixture tree but omits root README.md from fixture allowed_write_roots
+      actual_behavior: executor created README.md as required by the frozen fixture tree
+      classification: DISPUTED_REQUIRES_PRO_FRONTIER_ADJUDICATION
+      effect_on_mechanical_routing: prevents_clean_M3_pass
+  noncritical_observations:
+    - S8 freshness and forbidden-read behavior are supported by branch isolation plus Owner/worker attestation; complete separate-chat connector action telemetry is not available to this controller
+    - test artifacts are present and statically evidenced; no external runtime test execution result is claimed
+    - no per-repository SHA proof is claimed for unnamed real targets
+    - exact served backend identities are not attestable
+
+  proposed_amendments:
+    - proposal: reconcile fixture branch allowed_write_roots with the same contract's required root README.md, if fresh Pro confirms this is a profile wording defect rather than a rerun-relevant problem
+      evidence_refs:
+        - notes/target-agent-lifecycle-v1-execution-package-001/00-controller-fixture-and-branch-contract.md
+        - runs/MNE-TARGET-LIFECYCLE-V1-001/mechanical/declared-vs-actual-write-sets.yaml
+      adoption_status: not_adopted_pending_fresh_Pro_and_Owner_review
+
+  M0_to_M11:
+    M0: PASS
+    M1: PASS
+    M2: PASS
+    M3: DISPUTED_REQUIRES_PRO_FRONTIER_ADJUDICATION
+    M4: PASS
+    M5: PASS
+    M6: PASS
+    M7: PASS
+    M8: PASS
+    M9: PASS
+    M10: PASS
+    M11: PASS
+
+  no_write_status:
+    Mnemosyne_before_after_equal: true
+    Meta_Agent_before_after_equal: true
+    claimed_scope_complete: true
+  S8_status:
+    branch_isolation: PASS
+    worker_diff_only_authorized_output: true
+    Alpha_changed: false
+    hidden_contract_claims: []
+    provisional_disposition: SCENARIO_PASS
+  S11_status:
+    source_target_tree: 05f9acdb82521a2d72a93b4271115c444477e853
+    restored_target_tree: 05f9acdb82521a2d72a93b4271115c444477e853
+    source_restored_equal: true
+    backup_promoted_to_authority: false
+    provisional_disposition: SCENARIO_PASS
+
+  mechanical_controller_disposition: V1_BUNDLE_COMPLETE_WITH_BLOCKERS_READY_FOR_FRESH_PRO
+  mechanical_controller_reason: all_selected_cells_complete_and_exactly_bound; one_execution_profile_write_allowlist_discrepancy_requires_fresh_Pro_classification_before_any_global_disposition
+  Pro_frontier_disposition:
+    status: pending
+    value: null
+  Owner_architecture_decision:
+    status: pending
+    value: null
+
+  S10_executed: false
+  V2_authorized: false
+  target_adoption_authorized: false
+  execution_source_modified: false
+  real_target_modified: false
+  raw_result_ingested_into_Mnemosyne: false
+  cleanup_authorized: false
