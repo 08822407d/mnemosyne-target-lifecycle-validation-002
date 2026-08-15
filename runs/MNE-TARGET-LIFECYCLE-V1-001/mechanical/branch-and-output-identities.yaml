@@ -1,0 +1,34 @@
+branch_and_output_identities:
+  run_id: MNE-TARGET-LIFECYCLE-V1-001
+  synthetic_repository: 08822407d/mnemosyne-target-lifecycle-validation-002
+  synthetic_master_preserved_at: e8e3296922185b4b70997c2351d6f39423f2cd4f
+  controller_branch: tlr-v1-controller
+  controller_head_at_inventory_write_parent: 8b6741f4e0bee6dc79ea471d5a88491432602176
+  fixture:
+    branch: tlr-v1-fixture-base
+    commit: 81f18eb5dcc6a6e68e496f67ae8f8eae782226e6
+    tree: f1e221ce8aef404579b96adb3ab01319016889db
+  task_identities:
+    - {task_id: TLR-V1-S1-001, scenario: S1, branch: tlr-v1-s1-destination-block, base: 81f18eb5dcc6a6e68e496f67ae8f8eae782226e6, head: d20f1239784f88072399a3c874800f6c94c0ad2c, result_path: run-evidence/S1/result.yaml, result_blob: 242447565024e465fa9c7717d7cf3520f364f5d0, output_commit: d20f1239784f88072399a3c874800f6c94c0ad2c, attempt: 1, retry_of: null}
+    - {task_id: TLR-V1-S2-001, scenario: S2, branch: tlr-v1-s2-bounded-writer, base: 81f18eb5dcc6a6e68e496f67ae8f8eae782226e6, head: b0923aedf551262f0b24409611824c526252982f, result_path: run-evidence/S2/result.yaml, result_blob: 0d20f7296a488b829f3cd393cde9fd32a2556cd5, output_commit: b0923aedf551262f0b24409611824c526252982f, attempt: 1, retry_of: null}
+    - {task_id: TLR-V1-S3-ALPHA-001, scenario: S3, branch: tlr-v1-s3-alpha, base: 81f18eb5dcc6a6e68e496f67ae8f8eae782226e6, head: 1a8496893260f35b0b06d32d6b2128a192489ae7, result_path: run-evidence/S3-alpha/result.yaml, result_blob: 73951924bcfdc4979e49113dd1b9f865a2bab7ac, output_commit: 1a8496893260f35b0b06d32d6b2128a192489ae7, attempt: 1, retry_of: null}
+    - {task_id: TLR-V1-S3-BETA-001, scenario: S3, branch: tlr-v1-s3-beta, base: 81f18eb5dcc6a6e68e496f67ae8f8eae782226e6, head: 9a77045e77856a25336a664840aeaa984cdb8886, result_path: run-evidence/S3-beta/result.yaml, result_blob: b3fe2e89119bf2bede9866e6e260d52516f720f0, output_commit: 9a77045e77856a25336a664840aeaa984cdb8886, attempt: 1, retry_of: null}
+    - {task_id: TLR-V1-S4-SHARED-001, scenario: S4, branch: tlr-v1-s4-shared-schema, base: 81f18eb5dcc6a6e68e496f67ae8f8eae782226e6, head: 2aa6c0a8a7ac39ab1d3e06a64006e83aff20b5aa, result_path: run-evidence/S4-shared/result.yaml, result_blob: ff04856f6091f074448307d21b9508351e74dea2, output_commit: 2aa6c0a8a7ac39ab1d3e06a64006e83aff20b5aa, attempt: 1, retry_of: null}
+    - {task_id: TLR-V1-S4-DEPENDENT-001, scenario: S4, branch: tlr-v1-s4-alpha-dependent, base: 81f18eb5dcc6a6e68e496f67ae8f8eae782226e6, head: 4861cc27e8960353f29af9ca5cfa0927430b89ad, result_path: run-evidence/S4-dependent/result.yaml, result_blob: 97064b6a9d77f0f44b92a8d9bf238d9c80609afc, output_commit: 4861cc27e8960353f29af9ca5cfa0927430b89ad, attempt: 1, retry_of: null}
+    - {task_id: TLR-V1-S4-UNKNOWN-001, scenario: S4, branch: tlr-v1-s4-unknown-global, base: 81f18eb5dcc6a6e68e496f67ae8f8eae782226e6, head: c77f20f0320313d1ccb2b4d1272dfa0daba8ef77, result_path: run-evidence/S4-unknown/result.yaml, result_blob: 09579f40e5a16d36f8397ab38b4220a68ae89286, output_commit: c77f20f0320313d1ccb2b4d1272dfa0daba8ef77, attempt: 1, retry_of: null}
+    - {task_id: TLR-V1-S5-001, scenario: S5, branch: tlr-v1-s5-upstream-proposal, base: 81f18eb5dcc6a6e68e496f67ae8f8eae782226e6, head: 8bfd56e5800566b048702d8b8a89e3bd05f9e6e9, result_path: run-evidence/S5/result.yaml, result_blob: 71e889f4cdb94bd38dfc8be8825e2a21cf1c9422, output_commit: 8bfd56e5800566b048702d8b8a89e3bd05f9e6e9, attempt: 1, retry_of: null}
+    - {task_id: TLR-V1-S6-001, scenario: S6, branch: tlr-v1-s6-beta-requirement, base: 81f18eb5dcc6a6e68e496f67ae8f8eae782226e6, head: e90fcc6633bae50236aa96f9c499ba6c7379f53f, result_path: run-evidence/S6/result.yaml, result_blob: 140f79f262ae841d04b29576855f99c350a82da4, output_commit: e90fcc6633bae50236aa96f9c499ba6c7379f53f, attempt: 1, retry_of: null}
+    - {task_id: TLR-V1-S7-LIBRARY-001, scenario: S7, branch: tlr-v1-s7-commonlib-v2, base: 81f18eb5dcc6a6e68e496f67ae8f8eae782226e6, head: 9cfae2953fa8d7b2ff4ab2e14abab263891932de, result_path: run-evidence/S7-library/result.yaml, result_blob: 088cfa3b05c6f622d2549c2cc7aebe0bfe4027e7, output_commit: 9cfae2953fa8d7b2ff4ab2e14abab263891932de, attempt: 1, retry_of: null}
+    - {task_id: TLR-V1-S7-ALPHA-001, scenario: S7, branch: tlr-v1-s7-alpha-migration, base: 9cfae2953fa8d7b2ff4ab2e14abab263891932de, head: be627df6a1e633e8c93f25c056b643b603f1aea8, result_path: run-evidence/S7-alpha/result.yaml, result_blob: e5424a1294d565f026f26e46b11fd907879b39cf, output_commit: be627df6a1e633e8c93f25c056b643b603f1aea8, attempt: 1, retry_of: null}
+    - {task_id: TLR-V1-S8-001, scenario: S8, branch: tlr-v1-s8-insufficient-docs, base: 81f18eb5dcc6a6e68e496f67ae8f8eae782226e6, worker_before_head: 061779c317fd6bba3f43a1a9be5db86cd8b0dca0, head: d9c4c88aa17d6edf73955054833bd2738709aec9, result_path: run-evidence/S8/output/negative-documentation-assessment.yaml, result_blob: ffe9056797812d18c198682fb022749da466d421, output_commit: d9c4c88aa17d6edf73955054833bd2738709aec9, attempt: 1, retry_of: null}
+    - {task_id: TLR-V1-S9-001, scenario: S9, branch: tlr-v1-s9-imperfect-route, base: 81f18eb5dcc6a6e68e496f67ae8f8eae782226e6, head: b16a458339497425387d71c843388ef30aa2eb46, result_path: run-evidence/S9/result.yaml, result_blob: 605e3f916e03f4f82fdeeb515b53fc16e3d4d006, output_commit: b16a458339497425387d71c843388ef30aa2eb46, attempt: 1, retry_of: null}
+    - {task_id: TLR-V1-S11-001, scenario: S11, branch: tlr-v1-s11-backup-restore, base: 81f18eb5dcc6a6e68e496f67ae8f8eae782226e6, head: 47262b6bf8f89c9ac13d7f488595f8adff250299, result_path: run-evidence/S11/restore-result.yaml, result_blob: 258b852b728d11f7a0d09aadd5aa8903e51e428f, output_commit: 47262b6bf8f89c9ac13d7f488595f8adff250299, attempt: 1, retry_of: null}
+  cell_controller_refs:
+    - {cell: core, path: runs/MNE-TARGET-LIFECYCLE-V1-001/cells/core-cell-result.yaml, blob: 7fbda83c0fd8f6b7868d84f835bfda46a384e98b}
+    - {cell: S7, path: runs/MNE-TARGET-LIFECYCLE-V1-001/cells/s7-positive-cell-result.yaml, blob: 843ed26ace895c7bcf7cb869b3dd15233e869755}
+    - {cell: S8, path: runs/MNE-TARGET-LIFECYCLE-V1-001/cells/s8-negative-cell-result.yaml, creation_commit: 6ef3c366520d4145f42211678c773069fb03c596}
+    - {cell: S11, path: runs/MNE-TARGET-LIFECYCLE-V1-001/cells/s11-backup-cell-result.yaml, blob: 0e252cfbda93d4da71dbff3afa8befa490fb40a5}
+  incidents: []
+  retries: []
+  duplicate_task_branches_detected: false
+  scenario_PRs_detected: false
