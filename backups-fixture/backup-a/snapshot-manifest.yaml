@@ -1,0 +1,14 @@
+backup_snapshot:
+  snapshot_id: backup-a
+  target_id: agent-alpha
+  source_repository: 08822407d/mnemosyne-target-lifecycle-validation-002
+  source_commit: 81f18eb5dcc6a6e68e496f67ae8f8eae782226e6
+  source_target_root: targets/agent-alpha/
+  source_integrity_identity: 05f9acdb82521a2d72a93b4271115c444477e853
+  backup_location: backups-fixture/backup-a/agent-alpha/
+  content_scope: [authority.yaml,current.md,dependencies.yaml,requirements/,src/,tests/]
+  snapshot_commit: 2d792df6a273c885c79b80cd612b598babdbef01
+  snapshot_content_identity: 05f9acdb82521a2d72a93b4271115c444477e853
+  independent_editing_allowed: false
+  authority_owner: none_backup_is_non_authoritative
+  restore_test_ref: run-evidence/S11/restore-result.yaml
