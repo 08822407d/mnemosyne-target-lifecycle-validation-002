@@ -30,7 +30,7 @@ validation_run_manifest:
 
   date_or_window:
     started_at: 2026-08-15
-    completed_at: null
+    completed_at: 2026-08-15
 
   execution:
     actor: ChatGPT
@@ -76,8 +76,8 @@ validation_run_manifest:
   phases:
     V0:
       authorized: true
-      executed: in_progress
-      result: pending
+      executed: true
+      result: V0_PASS_ELIGIBLE_FOR_SEPARATE_V1_DECISION
     V1:
       authorized: false
       executed: false
@@ -88,16 +88,34 @@ validation_run_manifest:
     - ref: runs/MNE-TARGET-LIFECYCLE-V0-001/00-validation-package-receive.yaml
       relation: produced
       immutable_identity:
-        type: git_commit_sha
-        value: f609ea06f744e529cbe88fd2a6199629361dcb32
+        type: git_blob_sha
+        value: 11f8d2baa07899a6d9e31bb10a60381a443e466c
+      creation_commit: f609ea06f744e529cbe88fd2a6199629361dcb32
     - ref: runs/MNE-TARGET-LIFECYCLE-V0-001/01-package-integrity-receipt.yaml
       relation: produced
       immutable_identity:
+        type: git_blob_sha
+        value: 364c4189144b8363cc57cb8fddf68be66f670f82
+      creation_commit: d12666149c5ba0f9377b0caef63fd2b3ac41550e
+    - ref: runs/MNE-TARGET-LIFECYCLE-V0-001/03-material-safety-and-no-write-baseline.yaml
+      relation: produced
+      immutable_identity:
+        type: git_blob_sha
+        value: b14d9a7b231a1583ba03aa3738c9cec155a5ad92
+      creation_commit: fe4cf86ce912a30ef3067d9d8b8133832010ab46
+    - ref: runs/MNE-TARGET-LIFECYCLE-V0-001/04-real-repository-no-write-proof.yaml
+      relation: produced
+      immutable_identity:
         type: git_commit_sha
-        value: d12666149c5ba0f9377b0caef63fd2b3ac41550e
+        value: 20c3a3bf890a99e89d600955b2e1b7a75a30090e
+    - ref: runs/MNE-TARGET-LIFECYCLE-V0-001/05-v0-result.yaml
+      relation: produced
+      immutable_identity:
+        type: git_commit_sha
+        value: e9f7e6cc9cd6c42e56ac48fa103df47b67ecfbeb
 
   limitations:
     - repository_was_created_empty_so_no_prewrite_commit_SHA_existed; first V0 receive commit is used as the pinned comparison baseline
-    - no exact full-name real business or language-learning repositories were listed in the run authorization; no such repositories are accessed in V0
+    - no exact full-name real business or language-learning repositories were listed in the run authorization; no such repositories were accessed in V0
     - exact served backend identity is not attestable
   omissions: []
