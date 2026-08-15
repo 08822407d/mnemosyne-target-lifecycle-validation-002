@@ -1,0 +1,47 @@
+V0_preflight_baseline:
+  run_id: MNE-TARGET-LIFECYCLE-V0-001
+  repository_identity:
+    full_name: 08822407d/mnemosyne-target-lifecycle-validation-002
+    visibility: public
+    default_branch: master
+    pinned_base_sha: f609ea06f744e529cbe88fd2a6199629361dcb32
+    current_branch_at_baseline: master
+    open_branches_enumerated:
+      - master
+    branch_enumeration_complete: true
+    open_PRs: []
+    open_PR_enumeration_complete: true
+  material_safety:
+    class: public_synthetic_only
+    files_created_so_far:
+      - runs/MNE-TARGET-LIFECYCLE-V0-001/00-validation-package-receive.yaml
+      - runs/MNE-TARGET-LIFECYCLE-V0-001/01-package-integrity-receipt.yaml
+      - runs/MNE-TARGET-LIFECYCLE-V0-001/02-run-manifest.yaml
+    substantive_fixture_created: false
+    S1_through_S11_started: false
+    private_material_present: false
+    real_target_material_present: false
+    credentials_or_secrets_present: false
+  connector_access_observation:
+    repository_readable: true
+    repository_write_succeeded: true
+    owner_reported_ChatGPT_settings_checkbox_for_new_repo: not_checked
+    V0_interpretation: no additional checkbox action is required for this run because the current connector already has mechanically demonstrated read/write access
+  real_repository_no_write_baseline:
+    - repository: 08822407d/Mnemosyne
+      default_branch: master
+      before_ref: 930b5ed0c8d1db82e46fd9439035db3f2dd20c46
+      proof_method: exact_default_branch_SHA_before_after_comparison
+    - repository: 08822407d/Meta-Agent
+      default_branch: master
+      before_ref: 1fdbd7af9437f72f7c8106714ad1e64908983fb7
+      proof_method: exact_default_branch_SHA_before_after_comparison
+  claimed_scope_note: no additional real business or language-learning repository was named by full repository identity in the authorization; none is accessed in V0
+  V0_write_allowlist:
+    - runs/MNE-TARGET-LIFECYCLE-V0-001/
+  prohibited_writes:
+    - 08822407d/Mnemosyne
+    - 08822407d/Meta-Agent
+    - any_real_business_target
+    - any_real_language_learning_target
+  preflight_disposition: PASS
