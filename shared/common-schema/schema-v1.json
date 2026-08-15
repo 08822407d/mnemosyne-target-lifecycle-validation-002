@@ -1,6 +1,10 @@
 {
   "$id": "synthetic-common-schema-v1",
   "version": 1,
-  "required": ["id"],
-  "properties": {"id": {"type": "string"}}
+  "required": ["id", "source"],
+  "properties": {
+    "id": {"type": "string"},
+    "source": {"type": "string"}
+  },
+  "change_note": "S4 shared-object change; dependent Alpha adaptation must not execute concurrently"
 }

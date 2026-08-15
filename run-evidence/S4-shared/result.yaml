@@ -1,0 +1,35 @@
+scenario_cell_output:
+  scenario_id: S4
+  task_ids: [TLR-V1-S4-SHARED-001]
+  canonical_branches: [tlr-v1-s4-shared-schema]
+  base_commits: [81f18eb5dcc6a6e68e496f67ae8f8eae782226e6]
+  authorization_ref: MNE-TARGET-LIFECYCLE-V1-RUN-AUTHORIZATION-001
+  intended_change: shared/common-schema/schema-v1.json
+  related_dependent_task:
+    task_id: TLR-V1-S4-DEPENDENT-001
+    intended_change: targets/agent-alpha/src/schema_consumer.py
+    relation: Alpha depends on common-schema
+  concurrency_analysis:
+    path_intersection: []
+    shared_or_dependency_relation: true
+    git_text_mergeability_is_sufficient: false
+    decision: serialize_shared_change_before_dependent_adaptation
+    reconciliation_plan: preserve shared commit identity; dependent task remains blocked until an explicit dependency-aware base/reconciliation step is authorized
+  actions_performed: [shared_schema_change]
+  actions_blocked: [concurrent_dependent_Alpha_write]
+  actual_changed_paths:
+    - shared/common-schema/schema-v1.json
+    - run-evidence/S4-shared/result.yaml
+  mechanical_checks:
+    M3_declared_vs_actual_write_set: PASS
+    M4_concurrency_intersection: PASS_SERIALIZE
+    M5_authority_preservation: PASS
+    M11_output_identity: PENDING_GIT_BLOB_AND_COMMIT_CAPTURE
+  semantic_rubric:
+    R1_authority_fidelity: PASS
+    R2_scope_and_concurrency_fidelity: PASS
+    R6_provenance_recoverability: PASS
+  critical_failures: []
+  incidents: []
+  retries: []
+  provisional_disposition: SCENARIO_PASS
