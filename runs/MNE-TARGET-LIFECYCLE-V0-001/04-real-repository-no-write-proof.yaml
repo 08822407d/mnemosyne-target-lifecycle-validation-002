@@ -1,0 +1,31 @@
+real_repository_no_write_proof:
+  run_id: MNE-TARGET-LIFECYCLE-V0-001
+  repositories:
+    - repository: 08822407d/Mnemosyne
+      before_ref: 930b5ed0c8d1db82e46fd9439035db3f2dd20c46
+      after_ref: 930b5ed0c8d1db82e46fd9439035db3f2dd20c46
+      changed: false
+      proof_method: exact_default_branch_SHA_before_after_comparison
+      observed_at: 2026-08-15
+      limitation: none_for_named_repository
+    - repository: 08822407d/Meta-Agent
+      before_ref: 1fdbd7af9437f72f7c8106714ad1e64908983fb7
+      after_ref: 1fdbd7af9437f72f7c8106714ad1e64908983fb7
+      changed: false
+      proof_method: exact_default_branch_SHA_before_after_comparison
+      observed_at: 2026-08-15
+      limitation: none_for_named_repository
+  additional_prohibited_target_classes:
+    - any_real_business_target
+    - any_real_language_learning_target
+  additional_target_repository_identity_limitation: no additional real target was named by exact full repository identity in the Owner authorization; V0 did not access or write any such repository and does not claim per-repository before/after commit proof for unnamed repositories
+  complete_for_claimed_scope: true
+  claimed_scope: exact_before_after_commit_proof_for_the_two_named_accessible_real_repositories_plus_no_access_or_write_actions_to_any_other_repository
+  exception:
+    approved: false
+    decision_ref: null
+    reason: null
+    alternative_evidence: []
+    confidence: high_for_named_repository_ref_comparisons
+    independently_verified_by_Owner: false
+    not_future_precedent: true
