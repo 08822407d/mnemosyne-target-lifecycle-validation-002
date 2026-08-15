@@ -1,0 +1,22 @@
+fixture_receipt:
+  run_id: MNE-TARGET-LIFECYCLE-V1-001
+  fixture_id: TLR-V02-SYNTHETIC-001
+  fixture_version: 0.1.0
+  repository: 08822407d/mnemosyne-target-lifecycle-validation-002
+  visibility: public
+  fixture_branch: tlr-v1-fixture-base
+  fixture_commit: 81f18eb5dcc6a6e68e496f67ae8f8eae782226e6
+  fixture_tree: f1e221ce8aef404579b96adb3ab01319016889db
+  V0_parent_commit: e8e3296922185b4b70997c2351d6f39423f2cd4f
+  material_class: public_synthetic_only
+  private_material_present: false
+  real_target_material_present: false
+  credentials_or_secrets_present: false
+  S7_v2_sufficient_guide_present: false
+  S8_expected_answer_present: false
+  authority_roots:
+    agent-alpha: synthetic-alpha-owner
+    agent-beta: synthetic-beta-owner
+    common-lib: synthetic-library-owner
+    common-schema: synthetic-shared-owner
+  disposition: PASS
