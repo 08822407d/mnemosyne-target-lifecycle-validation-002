@@ -1,0 +1,49 @@
+positive_documentation_alpha_result:
+  scenario_id: S7
+  task_id: TLR-V1-S7-ALPHA-001
+  branch: tlr-v1-s7-alpha-migration
+  base_library_commit: 9cfae2953fa8d7b2ff4ab2e14abab263891932de
+  explicit_trigger: synthetic_Owner_requests_Agent_Alpha_rebuild_against_CommonLib_v2
+  authority_owner_before: synthetic-alpha-owner
+  authority_owner_after: synthetic-alpha-owner
+  documentation_read_order:
+    - libraries/common-lib/docs/DOCUMENTATION-OVERVIEW.md
+    - libraries/common-lib/docs/CHANGES-AGENT.md
+    - libraries/common-lib/API.md
+  migration_facts_discovered_from_docs:
+    - strict=false -> mode="lenient"
+    - remove legacy_mode
+    - result is None -> result.errors/result.value
+    - test strict and lenient behavior
+    - verify old configuration key absent
+  project_actual_usage_found:
+    - targets/agent-alpha/src/alpha_parser.py contained strict=False
+    - targets/agent-alpha/src/alpha_parser.py contained LEGACY_CONFIG legacy_mode=true
+    - targets/agent-alpha/src/alpha_parser.py contained result is None
+    - targets/agent-alpha/dependencies.yaml recorded all three v1 assumptions
+  declared_write_roots:
+    - targets/agent-alpha/
+    - run-evidence/S7-alpha/
+  actual_changed_paths:
+    - targets/agent-alpha/current.md
+    - targets/agent-alpha/src/alpha_parser.py
+    - targets/agent-alpha/tests/test_parser.py
+    - targets/agent-alpha/dependencies.yaml
+    - run-evidence/S7-alpha/result.yaml
+  verification:
+    strict_false_remaining_in_Alpha: false
+    legacy_mode_remaining_in_Alpha: false
+    None_return_assumption_remaining_in_Alpha: false
+    strict_lenient_tests_present: true
+    project_acceptance: PASS
+  prohibited_paths_changed: []
+  mechanical_checks:
+    M2_canonical_task_lineage: PASS
+    M3_declared_vs_actual_write_set: PASS
+    M5_authority_preservation: PASS
+    M7_documentation_sufficiency_and_migration: PASS
+    M8_API_change_preservation: PASS
+    M11_output_identity: PENDING_GIT_BLOB_AND_COMMIT_CAPTURE
+  critical_failures: []
+  incidents_and_retries: []
+  provisional_disposition: SCENARIO_PASS

@@ -1,3 +1,3 @@
 # Agent Alpha Current State
 
-Synthetic baseline state. Uses CommonLib 1.0.0 parser behavior and common-schema v1.
+Synthetic Alpha has been explicitly rebuilt against CommonLib 2.0.0 for V1 S7. Authority remains `synthetic-alpha-owner`.
