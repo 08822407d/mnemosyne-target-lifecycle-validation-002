@@ -1,0 +1,133 @@
+pre_S8_mechanical_checks:
+  run_id: MNE-TARGET-LIFECYCLE-V1-001
+  fixture_commit: 81f18eb5dcc6a6e68e496f67ae8f8eae782226e6
+  scope: controller_fixture_Core_S7_S11_and_S8_preparation_only
+  global_V1_disposition_permitted: false
+
+  scenario_write_set_checks:
+    S1:
+      head: d20f1239784f88072399a3c874800f6c94c0ad2c
+      changed_paths: [run-evidence/S1/result.yaml]
+      unexpected_paths: []
+      verdict: PASS
+    S2:
+      head: b0923aedf551262f0b24409611824c526252982f
+      changed_paths: [run-evidence/S2/result.yaml,targets/agent-alpha/current.md,targets/agent-alpha/tests/test_current.py]
+      unexpected_paths: []
+      verdict: PASS
+    S3_alpha:
+      head: 1a8496893260f35b0b06d32d6b2128a192489ae7
+      changed_paths: [run-evidence/S3-alpha/result.yaml,targets/agent-alpha/src/alpha_feature.py,targets/agent-alpha/tests/test_alpha_feature.py]
+      unexpected_paths: []
+      verdict: PASS
+    S3_beta:
+      head: 9a77045e77856a25336a664840aeaa984cdb8886
+      changed_paths: [run-evidence/S3-beta/result.yaml,targets/agent-beta/src/beta_feature.py,targets/agent-beta/tests/test_beta_feature.py]
+      unexpected_paths: []
+      verdict: PASS
+    S4_shared:
+      head: 2aa6c0a8a7ac39ab1d3e06a64006e83aff20b5aa
+      changed_paths: [run-evidence/S4-shared/result.yaml,shared/common-schema/schema-v1.json]
+      unexpected_paths: []
+      verdict: PASS
+    S4_dependent:
+      head: 4861cc27e8960353f29af9ca5cfa0927430b89ad
+      changed_paths: [run-evidence/S4-dependent/result.yaml]
+      dependent_Alpha_write_blocked: true
+      unexpected_paths: []
+      verdict: PASS
+    S4_unknown:
+      head: c77f20f0320313d1ccb2b4d1272dfa0daba8ef77
+      changed_paths: [run-evidence/S4-unknown/result.yaml]
+      generated_global_write_blocked: true
+      unexpected_paths: []
+      verdict: PASS
+    S5:
+      head: 8bfd56e5800566b048702d8b8a89e3bd05f9e6e9
+      changed_paths: [run-evidence/S5/result.yaml]
+      downstream_write_performed: false
+      unexpected_paths: []
+      verdict: PASS
+    S6:
+      head: e90fcc6633bae50236aa96f9c499ba6c7379f53f
+      changed_paths: [run-evidence/S6/result.yaml,targets/agent-beta/requirements/invoice-order.md,targets/agent-beta/src/beta_feature.py,targets/agent-beta/tests/test_beta_feature.py]
+      unexpected_paths: []
+      verdict: PASS
+    S9:
+      head: b16a458339497425387d71c843388ef30aa2eb46
+      changed_paths: [run-evidence/S9/result.yaml]
+      CommonLib_or_provider_candidate_applied: false
+      unexpected_paths: []
+      verdict: PASS
+
+  concurrency_checks:
+    S3:
+      Alpha_branch: tlr-v1-s3-alpha
+      Beta_branch: tlr-v1-s3-beta
+      common_base: 81f18eb5dcc6a6e68e496f67ae8f8eae782226e6
+      exact_path_intersection: []
+      shared_or_repository_global_object_relation: false
+      uncommitted_result_dependency: false
+      merge_order_dependency: false
+      governance_decision: proceed_concurrently
+      verdict: PASS
+    S4:
+      shared_branch: tlr-v1-s4-shared-schema
+      dependent_branch: tlr-v1-s4-alpha-dependent
+      shared_dependency_relation: true
+      governance_decision: serialize_shared_change_and_block_dependent_write_until_reconciliation
+      unknown_branch: tlr-v1-s4-unknown-global
+      unknown_generated_global_effect: true
+      unknown_governance_decision: block_concurrency_and_do_not_implement
+      verdict: PASS
+
+  S7_checks:
+    library_branch: tlr-v1-s7-commonlib-v2
+    library_head: 9cfae2953fa8d7b2ff4ab2e14abab263891932de
+    library_changed_only_allowed_roots: true
+    human_Agent_docs_and_navigation_present: true
+    required_migration_facts_present: true
+    exhaustive_authoritative_consumer_registry_created: false
+    Alpha_branch: tlr-v1-s7-alpha-migration
+    Alpha_base_is_library_final_commit: true
+    Alpha_head: be627df6a1e633e8c93f25c056b643b603f1aea8
+    Alpha_changed_only_allowed_roots: true
+    explicit_rebuild_trigger_present: true
+    verdict: PASS
+
+  S11_checks:
+    source_target_tree: 05f9acdb82521a2d72a93b4271115c444477e853
+    snapshot_data_commit: 2d792df6a273c885c79b80cd612b598babdbef01
+    failure_commit: f95a8a41c58001b5f447af7d9483dd471db80d45
+    restore_commit: 48b23aeb74ec99dd4459accf1fd26ac8abbbef92
+    final_head: 47262b6bf8f89c9ac13d7f488595f8adff250299
+    restored_target_tree: 05f9acdb82521a2d72a93b4271115c444477e853
+    exact_restore_equality: true
+    backup_promoted_to_authority: false
+    parent_meta_recovery_copy_used: false
+    verdict: PASS
+
+  S8_preparation_checks:
+    branch: tlr-v1-s8-insufficient-docs
+    base: 81f18eb5dcc6a6e68e496f67ae8f8eae782226e6
+    head: 061779c317fd6bba3f43a1a9be5db86cd8b0dca0
+    changed_paths_from_fixture:
+      - libraries/common-lib/VERSION
+      - libraries/common-lib/docs/CHANGES-HUMAN.md
+      - run-evidence/S8/input/authorization-receipt.yaml
+      - run-evidence/S8/input/isolation-receipt.yaml
+      - run-evidence/S8/input/source-inventory.yaml
+      - run-evidence/S8/input/worker-task.md
+    unexpected_paths: []
+    sufficient_Agent_guide_present: false
+    CommonLib_v2_API_source_tests_present: false
+    exact_hidden_migration_facts_in_worker_packet: false
+    S7_library_head: 9cfae2953fa8d7b2ff4ab2e14abab263891932de
+    S7_vs_S8_relation: diverged
+    S7_vs_S8_merge_base: 81f18eb5dcc6a6e68e496f67ae8f8eae782226e6
+    S7_commit_is_S8_ancestor: false
+    verdict: PASS_PREPARED_PENDING_FRESH_WORKER
+
+  incidents: []
+  blockers_for_S8_launch: []
+  disposition: PASS
