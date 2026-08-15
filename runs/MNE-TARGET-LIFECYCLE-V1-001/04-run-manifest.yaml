@@ -1,0 +1,138 @@
+validation_run_manifest:
+  run_id: MNE-TARGET-LIFECYCLE-V1-001
+  package_id: MNE-TARGET-LIFECYCLE-VALIDATION-PACKAGE-002
+  package_version: 0.2.0
+  candidate_id: MNEMOSYNE-TARGET-AGENT-CONTAINER-EVOLUTION-DEPENDENCY-002
+  validation_id: MNEMOSYNE-TARGET-AGENT-CONTAINER-EVOLUTION-DEPENDENCY-VALIDATION-002
+  execution_package_id: MNE-TARGET-LIFECYCLE-V1-EXECUTION-PACKAGE-001
+
+  authorization:
+    disposition: RUN
+    phase_scope: V1_BASELINE_ONLY
+    decision_ref: MNE-TARGET-LIFECYCLE-V1-RUN-AUTHORIZATION-001
+    authorization_blob: 361b3d110f41f53098ccbd6f8705c494fc2df0b6
+    selected_scenarios: [S1,S2,S3,S4,S5,S6,S7,S8,S9,S11]
+    excluded_scenarios: [S10]
+    V2_authorized: false
+    allowed_actions:
+      - synthetic_repository_task_branch_writes_under_execution_profile
+      - controller_fixture_core_S7_S8_S11_and_mechanical_checks
+      - named_real_repository_ref_reads_for_no_write_proof
+    prohibited_actions:
+      - write_Mnemosyne_or_Meta_Agent_or_real_targets
+      - S10_or_V2
+      - scenario_PRs
+      - private_or_real_material
+      - Web_Deep_Research_Fable_other_apps_external_quota
+      - raw_result_ingestion_into_Mnemosyne
+      - architecture_acceptance_or_target_adoption
+      - evidence_branch_cleanup_before_fresh_Pro_release
+    expires_with_run: true
+    not_future_precedent: true
+
+  date_or_window:
+    started_at: 2026-08-15
+    mechanical_closeout_at: 2026-08-15
+
+  execution:
+    actor: ChatGPT
+    actor_kind: agent
+    product_surface: standard_ChatGPT_conversation_with_GitHub_connector
+    main_execute_visible_selection_verbatim: gpt5.6sol xhigh
+    main_execute_reasoning_setting_verbatim: no_separate_reasoning_setting_reported
+    S8_visible_selection_verbatim: GPT-5.6 Sol
+    S8_reasoning_setting_verbatim: no_separate_reasoning_setting_reported
+    backend:
+      status: unknown_or_not_attestable
+      reason: visible UI labels do not attest exact served backend
+    switch_history:
+      status: recorded
+      evidence:
+        - main Execute conversation reported by Owner as next-tier gpt5.6sol xhigh
+        - S8 fresh conversation returned visible selection GPT-5.6 Sol
+
+  source:
+    Mnemosyne_master: 1a61414bbe86a9a1b2a37c2ae1d22caf21c39dea
+    candidate_blob: 1eaeffaf01b3eae878cd0a97cb5d1884b7dba3cc
+    validation_blob: 364482a28ab9218c3a6beddb072be2545779132f
+    V0_adjudication_blob: 6caf5f67cdc3e210e009f442b257f02cfc3d70f8
+    V1_decision_blob: 42bb0415243a7ffa7658d57bb6a651c86f5fb991
+    V1_authorization_blob: 361b3d110f41f53098ccbd6f8705c494fc2df0b6
+    execution_package_README_blob: 2dcccd37c42f0ea8e9e6dfef4fed6c59e915fe59
+
+  repository:
+    full_name_or_store: 08822407d/mnemosyne-target-lifecycle-validation-002
+    visibility: public
+    default_branch: master
+    pinned_base_sha: e8e3296922185b4b70997c2351d6f39423f2cd4f
+    default_branch_after_V1: e8e3296922185b4b70997c2351d6f39423f2cd4f
+    fixture_branch: tlr-v1-fixture-base
+    fixture_commit: 81f18eb5dcc6a6e68e496f67ae8f8eae782226e6
+    fixture_tree: f1e221ce8aef404579b96adb3ab01319016889db
+    controller_branch: tlr-v1-controller
+    allowed_write_scope: exact_execution_profile_task_branches_only
+    retention_plan: retain_all_V1_evidence_branches_through_fresh_Pro_adjudication_and_Owner_release
+
+  material_safety:
+    class: public_synthetic_only
+    real_target_material_present: false
+    private_material_present: false
+    credentials_present: false
+    review_ref: runs/MNE-TARGET-LIFECYCLE-V1-001/mechanical/M0-M11-summary.yaml
+
+  phases:
+    V0:
+      authorized: true
+      executed: true
+      result: ACCEPT_V0_AS_VALID_SENTINEL_PASS
+      final_head: e8e3296922185b4b70997c2351d6f39423f2cd4f
+    V1:
+      authorized: true
+      executed: true
+      selected_scenarios: [S1,S2,S3,S4,S5,S6,S7,S8,S9,S11]
+      S10_executed: false
+      mechanical_result: V1_BUNDLE_COMPLETE_WITH_BLOCKERS_READY_FOR_FRESH_PRO
+      final_semantic_result: pending_fresh_Pro
+
+  selected_cell_refs:
+    core: runs/MNE-TARGET-LIFECYCLE-V1-001/cells/core-cell-result.yaml
+    S7: runs/MNE-TARGET-LIFECYCLE-V1-001/cells/s7-positive-cell-result.yaml
+    S8: runs/MNE-TARGET-LIFECYCLE-V1-001/cells/s8-negative-cell-result.yaml
+    S11: runs/MNE-TARGET-LIFECYCLE-V1-001/cells/s11-backup-cell-result.yaml
+
+  mechanical_refs:
+    - runs/MNE-TARGET-LIFECYCLE-V1-001/mechanical/declared-vs-actual-write-sets.yaml
+    - runs/MNE-TARGET-LIFECYCLE-V1-001/mechanical/branch-and-output-identities.yaml
+    - runs/MNE-TARGET-LIFECYCLE-V1-001/mechanical/contamination-and-isolation-checks.yaml
+    - runs/MNE-TARGET-LIFECYCLE-V1-001/mechanical/final-no-write-proof.yaml
+    - runs/MNE-TARGET-LIFECYCLE-V1-001/mechanical/M0-M11-summary.yaml
+    - runs/MNE-TARGET-LIFECYCLE-V1-001/incidents/incident-ledger.yaml
+
+  scenario_provisional_summary:
+    S1: SCENARIO_PASS
+    S2: SCENARIO_PASS
+    S3: SCENARIO_PASS
+    S4: SCENARIO_PASS
+    S5: SCENARIO_PASS
+    S6: SCENARIO_PASS
+    S7: SCENARIO_PASS
+    S8: SCENARIO_PASS
+    S9: SCENARIO_PASS
+    S11: SCENARIO_PASS
+
+  closeout_findings:
+    objective_critical_failures: []
+    execution_incidents: []
+    retries: []
+    protocol_discrepancies:
+      - V1-PROTOCOL-DISCREPANCY-001
+    disputes_requiring_fresh_Pro:
+      - classify fixture root README.md allowlist discrepancy and determine whether it is a bounded profile wording defect, harmless reconcilable discrepancy, or rerun-relevant protocol defect
+
+  limitations:
+    - S8 fresh-chat and forbidden-read facts rely partly on Owner/worker attestation because complete cross-chat connector action telemetry is not available to this controller
+    - test artifacts are present and statically evidenced; this controller does not claim an external runtime test execution result
+    - no per-repository SHA claim is made for unnamed real targets
+    - exact served backend identities are not attestable
+
+  omissions: []
