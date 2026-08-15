@@ -1,0 +1,4 @@
+simulation: backup_a_unavailable
+snapshot_data_commit: 2d792df6a273c885c79b80cd612b598babdbef01
+available_for_restore: false
+backup_b_affected: false

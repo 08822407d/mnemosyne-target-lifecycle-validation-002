@@ -1,0 +1,13 @@
+simulated_failures:
+  scenario_id: S11
+  source_target_tree: 05f9acdb82521a2d72a93b4271115c444477e853
+  snapshot_data_commit: 2d792df6a273c885c79b80cd612b598babdbef01
+  primary_loss:
+    targets_agent_alpha_removed: true
+  backup_a_unavailable:
+    snapshot_files_removed_from_current_tree: true
+    historical_snapshot_preserved_in_Git: true
+  backup_b:
+    remains_available: true
+    target_tree_identity: 05f9acdb82521a2d72a93b4271115c444477e853
+  rewrite_history_used: false
