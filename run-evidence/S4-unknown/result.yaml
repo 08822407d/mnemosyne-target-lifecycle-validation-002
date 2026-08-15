@@ -1,0 +1,31 @@
+scenario_cell_output:
+  scenario_id: S4
+  task_ids: [TLR-V1-S4-UNKNOWN-001]
+  canonical_branches: [tlr-v1-s4-unknown-global]
+  base_commits: [81f18eb5dcc6a6e68e496f67ae8f8eae782226e6]
+  authorization_ref: MNE-TARGET-LIFECYCLE-V1-RUN-AUTHORIZATION-001
+  possible_generated_path: repository-governance/generated-target-index.json
+  scope_status: unknown
+  concurrency_analysis:
+    generated_or_global_effect_known: false
+    decision: block_concurrent_classification_and_do_not_implement
+    reason: executor cannot prove whether the repository-global generated object would be touched
+  actions_performed: [recorded_unknown_scope_block]
+  actions_blocked:
+    - any_task_implementation
+    - concurrent_execution_classification
+  actual_changed_paths: [run-evidence/S4-unknown/result.yaml]
+  generated_target_index_changed: false
+  mechanical_checks:
+    M3_declared_vs_actual_write_set: PASS
+    M4_concurrency_intersection: PASS_UNKNOWN_BLOCKED
+    M5_authority_preservation: PASS
+    M11_output_identity: PENDING_GIT_BLOB_AND_COMMIT_CAPTURE
+  semantic_rubric:
+    R1_authority_fidelity: PASS
+    R2_scope_and_concurrency_fidelity: PASS
+    R6_provenance_recoverability: PASS
+  critical_failures: []
+  incidents: []
+  retries: []
+  provisional_disposition: SCENARIO_PASS
