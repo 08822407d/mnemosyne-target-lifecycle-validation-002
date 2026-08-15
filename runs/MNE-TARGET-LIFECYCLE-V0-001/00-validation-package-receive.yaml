@@ -1,0 +1,81 @@
+validation_package_receive:
+  run_id: MNE-TARGET-LIFECYCLE-V0-001
+  package_id: MNE-TARGET-LIFECYCLE-VALIDATION-PACKAGE-002
+  candidate_id: MNEMOSYNE-TARGET-AGENT-CONTAINER-EVOLUTION-DEPENDENCY-002
+  validation_id: MNEMOSYNE-TARGET-AGENT-CONTAINER-EVOLUTION-DEPENDENCY-VALIDATION-002
+  source_master: 930b5ed0c8d1db82e46fd9439035db3f2dd20c46
+  source_refs:
+    candidate:
+      path: notes/target-agent-container-evolution-and-dependency-model-candidate-v0.2.md
+      blob_sha: 1eaeffaf01b3eae878cd0a97cb5d1884b7dba3cc
+    validation:
+      path: notes/validation-designs/target-agent-container-evolution-and-dependency-model-validation-v0.2.md
+      blob_sha: 364482a28ab9218c3a6beddb072be2545779132f
+    package_readme:
+      blob_sha: 444b7e7186e6e90002a1b9966bc69ff0e1b49aaa
+    package_00:
+      blob_sha: ec2016fe4a424c580318d7d725e5d3843c85559e
+    package_01:
+      blob_sha: d94d95bb196ee708e56e93c7f67404b524d65e35
+    package_02:
+      blob_sha: 1abacc24f4c6da9b81b877a67b81b615f15144d8
+    package_03:
+      blob_sha: d572c384d26777c8dd3c9f8ea49edc1a2e711b7d
+    package_04:
+      blob_sha: f4e31cd982ffe2716434599b633d01e360d0b57f
+    package_05:
+      blob_sha: 47c3f0a3bbc3b5b63b03e137aaa814a20dc1aa29
+    package_06:
+      blob_sha: 7582ee1a2777e8374a18a189d5b267a2f714fefc
+    owner_authorization:
+      path: notes/validation-run-decisions/MNE-TARGET-LIFECYCLE-V0-RUN-AUTHORIZATION-001.md
+      blob_sha: 25e330445c18cdd0833411d259a093c7a3ccfc61
+  required_files_read:
+    - candidate_v0.2
+    - validation_v0.2
+    - package_README
+    - package_00
+    - package_01
+    - package_02
+    - package_03
+    - package_04
+    - package_05
+    - package_06
+    - owner_authorization
+  missing_files: []
+  Owner_authorization_ref: MNE-TARGET-LIFECYCLE-V0-RUN-AUTHORIZATION-001
+  phase_scope: V0_ONLY
+  repository_or_store: 08822407d/mnemosyne-target-lifecycle-validation-002
+  visibility: public
+  repository_prewrite_state: empty_repository_no_commit_no_branch
+  pinned_base_sha: null
+  pinned_base_sha_note: empty repository has no commit SHA before the first V0 receipt commit; the first commit will be recorded as the V0 repository baseline
+  allowed_writes:
+    - runs/MNE-TARGET-LIFECYCLE-V0-001/
+    - repository_initialization_and_V0_sentinel_material_only
+  prohibited_repositories:
+    - 08822407d/Mnemosyne
+    - 08822407d/Meta-Agent
+    - any_real_business_target
+    - any_real_language_learning_target
+  material_class: public_synthetic_only
+  product_surface: standard_ChatGPT_conversation_with_GitHub_connector
+  visible_selection_verbatim: gpt-5.6 sol extra high
+  reasoning_setting_verbatim: not_separately_reported_by_Owner; preserved_inside_combined_visible_selection_verbatim
+  backend_status: unknown_or_not_attestable
+  connector_repository_access:
+    repository_readable: true
+    repository_push_permission_reported: true
+    ChatGPT_settings_checkbox_reported_by_Owner: not_checked
+    interpretation: connector access is mechanically available despite no manual checkbox action reported
+  open_lineage_prewrite:
+    branches: []
+    open_PRs: []
+  real_repository_no_write_method:
+    before_after_exact_default_branch_ref_comparison:
+      - repository: 08822407d/Mnemosyne
+        before_ref: 930b5ed0c8d1db82e46fd9439035db3f2dd20c46
+      - repository: 08822407d/Meta-Agent
+        before_ref: 1fdbd7af9437f72f7c8106714ad1e64908983fb7
+    limitation: no additional real business/language-learning repository was explicitly named by full repository identity in the V0 authorization; no such repository will be accessed or written
+  disposition: PASS
