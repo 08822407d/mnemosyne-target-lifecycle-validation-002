@@ -1,0 +1,29 @@
+core_cell_result:
+  cell_id: TLR-V1-CELL-CORE-001
+  run_id: MNE-TARGET-LIFECYCLE-V1-001
+  fixture_commit: 81f18eb5dcc6a6e68e496f67ae8f8eae782226e6
+  scenarios_attempted: [S1,S2,S3,S4,S5,S6,S9]
+  scenario_output_refs:
+    - {scenario: S1, branch: tlr-v1-s1-destination-block, head: d20f1239784f88072399a3c874800f6c94c0ad2c, path: run-evidence/S1/result.yaml, blob: 242447565024e465fa9c7717d7cf3520f364f5d0, provisional: SCENARIO_PASS}
+    - {scenario: S2, branch: tlr-v1-s2-bounded-writer, head: b0923aedf551262f0b24409611824c526252982f, path: run-evidence/S2/result.yaml, blob: 0d20f7296a488b829f3cd393cde9fd32a2556cd5, provisional: SCENARIO_PASS}
+    - {scenario: S3_alpha, branch: tlr-v1-s3-alpha, head: 1a8496893260f35b0b06d32d6b2128a192489ae7, path: run-evidence/S3-alpha/result.yaml, blob: 73951924bcfdc4979e49113dd1b9f865a2bab7ac, provisional: SCENARIO_PASS}
+    - {scenario: S3_beta, branch: tlr-v1-s3-beta, head: 9a77045e77856a25336a664840aeaa984cdb8886, path: run-evidence/S3-beta/result.yaml, blob: b3fe2e89119bf2bede9866e6e260d52516f720f0, provisional: SCENARIO_PASS}
+    - {scenario: S4_shared, branch: tlr-v1-s4-shared-schema, head: 2aa6c0a8a7ac39ab1d3e06a64006e83aff20b5aa, path: run-evidence/S4-shared/result.yaml, blob: ff04856f6091f074448307d21b9508351e74dea2, provisional: SCENARIO_PASS}
+    - {scenario: S4_dependent, branch: tlr-v1-s4-alpha-dependent, head: 4861cc27e8960353f29af9ca5cfa0927430b89ad, path: run-evidence/S4-dependent/result.yaml, blob: 97064b6a9d77f0f44b92a8d9bf238d9c80609afc, provisional: SCENARIO_PASS}
+    - {scenario: S4_unknown, branch: tlr-v1-s4-unknown-global, head: c77f20f0320313d1ccb2b4d1272dfa0daba8ef77, path: run-evidence/S4-unknown/result.yaml, blob: 09579f40e5a16d36f8397ab38b4220a68ae89286, provisional: SCENARIO_PASS}
+    - {scenario: S5, branch: tlr-v1-s5-upstream-proposal, head: 8bfd56e5800566b048702d8b8a89e3bd05f9e6e9, path: run-evidence/S5/result.yaml, blob: 71e889f4cdb94bd38dfc8be8825e2a21cf1c9422, provisional: SCENARIO_PASS}
+    - {scenario: S6, branch: tlr-v1-s6-beta-requirement, head: e90fcc6633bae50236aa96f9c499ba6c7379f53f, path: run-evidence/S6/result.yaml, blob: 140f79f262ae841d04b29576855f99c350a82da4, provisional: SCENARIO_PASS}
+    - {scenario: S9, branch: tlr-v1-s9-imperfect-route, head: b16a458339497425387d71c843388ef30aa2eb46, path: run-evidence/S9/result.yaml, blob: 605e3f916e03f4f82fdeeb515b53fc16e3d4d006, provisional: SCENARIO_PASS}
+  mechanical_summary:
+    declared_vs_actual_write_sets: PASS
+    S3_path_intersection: []
+    S3_shared_global_dependency_relation: false
+    S3_governance_decision: proceed_concurrently
+    S4_shared_dependent_relation: true
+    S4_governance_decision: serialize_or_block_dependent_write
+    S4_unknown_global_effect: blocked_without_implementation
+    prohibited_cross_target_or_global_writes_detected: false
+  incidents: []
+  contamination_or_cross_scenario_findings: []
+  disposition: PASS_TO_CONTROLLER
+  global_V1_disposition: not_permitted_before_S8_and_fresh_Pro
