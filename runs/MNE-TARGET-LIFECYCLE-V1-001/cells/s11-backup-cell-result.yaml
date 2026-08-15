@@ -1,0 +1,46 @@
+backup_restore_cell_result:
+  cell_id: TLR-V1-CELL-S11-001
+  run_id: MNE-TARGET-LIFECYCLE-V1-001
+  scenario_id: S11
+  task_id: TLR-V1-S11-001
+  branch: tlr-v1-s11-backup-restore
+  fixture_commit: 81f18eb5dcc6a6e68e496f67ae8f8eae782226e6
+  source_target_root: targets/agent-alpha/
+  source_target_tree: 05f9acdb82521a2d72a93b4271115c444477e853
+  snapshot_data_commit: 2d792df6a273c885c79b80cd612b598babdbef01
+  snapshot_manifest_commit: 41fb737be8af8984583ea312766285dba4bdfaed
+  failure_commit: f95a8a41c58001b5f447af7d9483dd471db80d45
+  simulated_failures:
+    - primary_loss
+    - backup_a_unavailable
+  restore_source: backup-b
+  restore_commit: 48b23aeb74ec99dd4459accf1fd26ac8abbbef92
+  final_branch_head: 47262b6bf8f89c9ac13d7f488595f8adff250299
+  result_ref:
+    path: run-evidence/S11/restore-result.yaml
+    blob: 258b852b728d11f7a0d09aadd5aa8903e51e428f
+    commit: 47262b6bf8f89c9ac13d7f488595f8adff250299
+  backup_a:
+    original_snapshot_tree: 05f9acdb82521a2d72a93b4271115c444477e853
+    current_restore_availability: false
+    historical_snapshot_preserved_in_git: true
+    independent_editing_allowed: false
+  backup_b:
+    snapshot_tree: 05f9acdb82521a2d72a93b4271115c444477e853
+    current_restore_availability: true
+    independent_editing_allowed: false
+  restored_target_tree: 05f9acdb82521a2d72a93b4271115c444477e853
+  source_and_restored_tree_equal: true
+  restored_authority_owner: synthetic-alpha-owner
+  backup_promoted_to_authority: false
+  parent_or_meta_recovery_copy_used: false
+  mechanical_checks:
+    M2_canonical_task_lineage: PASS
+    M3_declared_vs_actual_write_set: PASS
+    M5_authority_preservation: PASS
+    M6_parent_meta_boundary: PASS
+    M9_backup_restore_identity: PASS
+    M11_attempt_commit_blob_identity: PASS
+  critical_failures: []
+  incidents_and_retries: []
+  provisional_disposition: SCENARIO_PASS
