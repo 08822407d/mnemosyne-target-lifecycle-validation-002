@@ -1,0 +1,64 @@
+S8_launch_gate:
+  run_id: MNE-TARGET-LIFECYCLE-V1-001
+  scenario_id: S8
+  task_id: TLR-V1-S8-001
+  branch: tlr-v1-s8-insufficient-docs
+  base: 81f18eb5dcc6a6e68e496f67ae8f8eae782226e6
+  head: 061779c317fd6bba3f43a1a9be5db86cd8b0dca0
+  branch_compare_from_fixture:
+    ahead_by: 1
+    behind_by: 0
+    unexpected_paths: []
+  S7_library_head: 9cfae2953fa8d7b2ff4ab2e14abab263891932de
+  S7_vs_S8_relation: diverged
+  S7_vs_S8_merge_base: 81f18eb5dcc6a6e68e496f67ae8f8eae782226e6
+  S7_commits_not_in_S8_history: true
+  sufficient_guide_absent: true
+  CommonLib_v2_API_source_tests_absent: true
+  exact_hidden_migration_facts_in_worker_packet: false
+  sanitized_input_refs:
+    - path: run-evidence/S8/input/authorization-receipt.yaml
+      blob: 71b5fca1fdbbbf4be6e09998c5fd2a96978b4dd4
+    - path: run-evidence/S8/input/isolation-receipt.yaml
+      blob: a559c7feb10c3430eb21312f35a4ad280cff4df0
+    - path: run-evidence/S8/input/source-inventory.yaml
+      blob: 3e2fbddb9280a31b228b7a4b64ebc56b2919e803
+    - path: run-evidence/S8/input/worker-task.md
+      blob: f67a8da0fd220648a9b881811e82ee35c3d13c98
+    - path: libraries/common-lib/docs/CHANGES-HUMAN.md
+      blob: 1d34cc0025a25d736e8fb99d5b6af06999bed6c0
+    - path: libraries/common-lib/VERSION
+      blob: 227cea215648b1af34a87c9acf5b707fe02d2072
+  branch_inventory_ref:
+    branch: tlr-v1-s8-insufficient-docs
+    head: 061779c317fd6bba3f43a1a9be5db86cd8b0dca0
+    input_directory: run-evidence/S8/input/
+  isolation_receipt_ref:
+    path: run-evidence/S8/input/isolation-receipt.yaml
+    blob: a559c7feb10c3430eb21312f35a4ad280cff4df0
+  worker_conversation_requirements:
+    fresh_chat_required: true
+    prior_Execute_transcript_supplied: false
+    S7_facts_supplied: false
+    operator_freshness_attestation_required_at_launch: true
+    model_class: next_tier
+    visible_model_or_mode: record_verbatim_at_launch
+    backend_status: unknown_or_not_attestable
+  worker_allowed_writes:
+    - run-evidence/S8/output/
+  worker_prohibited_writes:
+    - targets/agent-alpha/
+    - libraries/common-lib/
+    - targets/agent-beta/
+    - shared/
+    - repository-governance/
+    - backups-fixture/
+  worker_prohibited_reads:
+    - S7 branches_or_outputs
+    - sufficient_CommonLib_Agent_migration_guide
+    - CommonLib_v2_API_source_tests
+    - frozen_package_concrete_v2_contract_section
+    - Execute_transcript_or_summary_containing_hidden_migration_facts
+  current_worker_execution_started: false
+  blockers: []
+  disposition: PASS
