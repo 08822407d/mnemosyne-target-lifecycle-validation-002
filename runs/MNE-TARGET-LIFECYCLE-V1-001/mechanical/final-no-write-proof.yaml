@@ -1,0 +1,34 @@
+real_repository_no_write_proof:
+  run_id: MNE-TARGET-LIFECYCLE-V1-001
+  repositories:
+    - repository: 08822407d/Mnemosyne
+      before_ref: 1a61414bbe86a9a1b2a37c2ae1d22caf21c39dea
+      after_ref: 1a61414bbe86a9a1b2a37c2ae1d22caf21c39dea
+      changed: false
+      proof_method: exact_default_branch_commit_comparison
+      limitation: proves no default-branch movement for the named repository during the V1 execution window; does not assert facts about unnamed repositories
+    - repository: 08822407d/Meta-Agent
+      before_ref: 1fdbd7af9437f72f7c8106714ad1e64908983fb7
+      after_ref: 1fdbd7af9437f72f7c8106714ad1e64908983fb7
+      changed: false
+      proof_method: exact_default_branch_commit_comparison
+      limitation: proves no default-branch movement for the named repository during the V1 execution window; does not assert facts about unnamed repositories
+  complete_for_claimed_scope: true
+  unnamed_real_target_scope:
+    connector_access_or_write_actions_from_this_execute_route: none
+    per_repository_SHA_claim: not_made
+    limitation: exact repository identities were not enumerated by the Owner authorization and were intentionally not accessed merely to enlarge the proof claim
+  synthetic_repository:
+    repository: 08822407d/mnemosyne-target-lifecycle-validation-002
+    default_branch_before_V1: e8e3296922185b4b70997c2351d6f39423f2cd4f
+    default_branch_after_V1: e8e3296922185b4b70997c2351d6f39423f2cd4f
+    V1_writes_confined_to_task_branches: true
+  exception:
+    approved: false
+    decision_ref: null
+    reason: null
+    alternative_evidence: []
+    confidence: high_for_named_default_branch_refs
+    independently_verified_by_Owner: false
+    not_future_precedent: true
+  M10_status: PASS
