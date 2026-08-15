@@ -1,0 +1,63 @@
+backup_restore_result:
+  scenario_id: S11
+  task_id: TLR-V1-S11-001
+  branch: tlr-v1-s11-backup-restore
+  source_repository: 08822407d/mnemosyne-target-lifecycle-validation-002
+  source_commit: 81f18eb5dcc6a6e68e496f67ae8f8eae782226e6
+  source_target_identity: 05f9acdb82521a2d72a93b4271115c444477e853
+  snapshot_data_commit: 2d792df6a273c885c79b80cd612b598babdbef01
+  snapshot_manifest_commit: 41fb737be8af8984583ea312766285dba4bdfaed
+  snapshots:
+    - snapshot_id: backup-a
+      location: backups-fixture/backup-a/agent-alpha/
+      source_identity: 05f9acdb82521a2d72a93b4271115c444477e853
+      snapshot_identity: 05f9acdb82521a2d72a93b4271115c444477e853
+      independent_editing_allowed: false
+      current_restore_availability: false
+    - snapshot_id: backup-b
+      location: backups-fixture/backup-b/agent-alpha/
+      source_identity: 05f9acdb82521a2d72a93b4271115c444477e853
+      snapshot_identity: 05f9acdb82521a2d72a93b4271115c444477e853
+      independent_editing_allowed: false
+      current_restore_availability: true
+  simulated_failures:
+    - type: primary_loss
+      commit: f95a8a41c58001b5f447af7d9483dd471db80d45
+    - type: backup_a_unavailable
+      commit: f95a8a41c58001b5f447af7d9483dd471db80d45
+  restore_source: backup-b
+  restored_target_root: targets/agent-alpha/
+  restored_commit: 48b23aeb74ec99dd4459accf1fd26ac8abbbef92
+  restored_target_identity: 05f9acdb82521a2d72a93b4271115c444477e853
+  restored_matches_source_exactly: true
+  required_records_recovered:
+    - authority.yaml
+    - current.md
+    - requirements/parser.md
+    - src/alpha_feature.py
+    - src/alpha_parser.py
+    - src/schema_consumer.py
+    - tests/test_alpha_feature.py
+    - tests/test_parser.py
+    - dependencies.yaml
+  authority_after_restore: synthetic-alpha-owner
+  backup_promoted_to_authority: false
+  parent_or_meta_recovery_copy_used: false
+  mismatches: []
+  declared_write_roots:
+    - targets/agent-alpha/
+    - backups-fixture/backup-a/
+    - backups-fixture/backup-b/
+    - backups-fixture/restore-work/
+    - run-evidence/S11/
+  prohibited_roots_changed: []
+  mechanical_checks:
+    M2_canonical_task_lineage: PASS
+    M3_declared_vs_actual_write_set: PASS
+    M5_authority_preservation: PASS
+    M6_no_parent_meta_recovery_copy: PASS
+    M9_backup_restore_identity: PASS
+    M11_attempt_commit_blob_identity: PASS
+  critical_failures: []
+  incidents_and_retries: []
+  provisional_disposition: SCENARIO_PASS
