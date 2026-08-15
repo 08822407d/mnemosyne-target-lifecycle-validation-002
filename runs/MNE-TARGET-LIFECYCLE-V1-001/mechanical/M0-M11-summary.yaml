@@ -1,0 +1,136 @@
+mechanical_check_summary:
+  run_id: MNE-TARGET-LIFECYCLE-V1-001
+  frozen_criteria:
+    package_id: MNE-TARGET-LIFECYCLE-VALIDATION-PACKAGE-002
+    mechanical_rubric_blob: d572c384d26777c8dd3c9f8ea49edc1a2e711b7d
+    closeout_contract_blob: 8fa6e254c4dcde9b74eb1504f33da2f9619aad22
+  checks:
+    M0_package_identity:
+      status: PASS
+      identities:
+        candidate_blob: 1eaeffaf01b3eae878cd0a97cb5d1884b7dba3cc
+        validation_blob: 364482a28ab9218c3a6beddb072be2545779132f
+        frozen_package_README_blob: 444b7e7186e6e90002a1b9966bc69ff0e1b49aaa
+        frozen_package_01_blob: d94d95bb196ee708e56e93c7f67404b524d65e35
+        frozen_package_02_blob: 1abacc24f4c6da9b81b877a67b81b615f15144d8
+        frozen_package_03_blob: d572c384d26777c8dd3c9f8ea49edc1a2e711b7d
+        frozen_package_04_blob: f4e31cd982ffe2716434599b633d01e360d0b57f
+        V0_adjudication_blob: 6caf5f67cdc3e210e009f442b257f02cfc3d70f8
+        V1_decision_candidate_blob: 42bb0415243a7ffa7658d57bb6a651c86f5fb991
+        V1_authorization_blob: 361b3d110f41f53098ccbd6f8705c494fc2df0b6
+        execution_package_README_blob: 2dcccd37c42f0ea8e9e6dfef4fed6c59e915fe59
+        execution_package_00_blob: 7068b5efc0d484baf48824c5692ee1b3b2d8a634
+        execution_package_01_blob: 700fc0afa72605bf1c10b5b655e7f637b569a235
+        execution_package_02_blob: 8dc54c1f7653d92ef940e4fe1f074d41a41f32bb
+        execution_package_03_blob: 1ad136ca9f7c4b2b22416ace686bc9ff915a78a6
+        execution_package_04_blob: cb084eedf8e0789362defa37c2abfb7bcaec2b2a
+        execution_package_05_blob: 8fa6e254c4dcde9b74eb1504f33da2f9619aad22
+        execution_package_06_blob: d47aaa7766e7d5e391bf380b8aa5e990722b6087
+        execution_package_07_blob: 2f0023dd20543a1b6d1213411cabdcdfa3d0d07b
+
+    M1_repository_material_identity:
+      status: PASS
+      repository: 08822407d/mnemosyne-target-lifecycle-validation-002
+      visibility: public
+      V1_pinned_base: e8e3296922185b4b70997c2351d6f39423f2cd4f
+      fixture_commit: 81f18eb5dcc6a6e68e496f67ae8f8eae782226e6
+      fixture_tree: f1e221ce8aef404579b96adb3ab01319016889db
+      material_class: public_synthetic_only
+      private_or_real_material_detected: false
+      credentials_or_secrets_intentionally_included: false
+
+    M2_canonical_task_lineage:
+      status: PASS
+      canonical_task_branches: 16
+      scenario_PRs: 0
+      duplicate_task_branches: 0
+      S3_two_distinct_task_IDs_by_design: true
+
+    M3_declared_actual_write_set:
+      status: DISPUTED_REQUIRES_PRO_FRONTIER_ADJUDICATION
+      ref: runs/MNE-TARGET-LIFECYCLE-V1-001/mechanical/declared-vs-actual-write-sets.yaml
+      discrepancy:
+        id: V1-PROTOCOL-DISCREPANCY-001
+        task: TLR-V1-FIXTURE-001
+        path: README.md
+        fact: execution-package fixture allowed_write_roots omit root README.md while the same contract frozen initial fixture tree explicitly requires README.md
+        observed_effect: README.md was created as required by the frozen initial fixture tree; no real/private/cross-target content is involved
+        fresh_Pro_classification_required: true
+
+    M4_concurrency_intersection:
+      status: PASS
+      S3:
+        exact_path_intersection: []
+        shared_global_dependency_relation: false
+        uncommitted_dependency: false
+        merge_order_dependency: false
+        decision: proceed_concurrently
+      S4:
+        shared_dependent_relation: true
+        dependent_write_before_reconciliation: false
+        unknown_global_effect_implemented: false
+        decision: serialize_or_block
+
+    M5_authority_preservation:
+      status: PASS
+      task_writer_promoted_to_standing_authority: false
+      Alpha_authority_owner_after_S7: synthetic-alpha-owner
+      Alpha_authority_owner_after_S11_restore: synthetic-alpha-owner
+      CommonLib_authority_owner_changed: false
+      Beta_authority_owner_changed: false
+
+    M6_parent_meta_content_boundary:
+      status: PASS
+      S1_only_minimal_blocking_receipt: true
+      Gamma_operational_or_reconstructable_target_created: false
+      parent_or_meta_repository_used_as_backup: false
+
+    M7_documentation_and_migration:
+      status: PASS
+      S7_human_doc_present: true
+      S7_Agent_doc_present: true
+      S7_documentation_overview_present: true
+      S7_API_and_tests_present: true
+      S7_required_migration_facts_present: true
+      S8_sufficient_facts_absent_from_authorized_packet: true
+      S8_Alpha_changed: false
+      runtime_test_execution_observation: test artifacts were created and mechanically inspected; no external runtime execution result is claimed by this controller
+
+    M8_source_requirement_API_preservation:
+      status: PASS
+      S6_exact_requirement_preserved: true
+      S7_source_requirements_and_material_API_change_preserved: true
+      S9_original_request_and_route_interactions_preserved: true
+      mandatory_fine_taxonomy_invented: false
+
+    M9_backup_restore_identity:
+      status: PASS
+      source_target_tree: 05f9acdb82521a2d72a93b4271115c444477e853
+      snapshot_data_commit: 2d792df6a273c885c79b80cd612b598babdbef01
+      failure_commit: f95a8a41c58001b5f447af7d9483dd471db80d45
+      restore_commit: 48b23aeb74ec99dd4459accf1fd26ac8abbbef92
+      restored_target_tree: 05f9acdb82521a2d72a93b4271115c444477e853
+      source_restored_equal: true
+      backup_promoted_to_authority: false
+
+    M10_real_repository_no_write:
+      status: PASS
+      ref: runs/MNE-TARGET-LIFECYCLE-V1-001/mechanical/final-no-write-proof.yaml
+      Mnemosyne_changed: false
+      Meta_Agent_changed: false
+      unnamed_target_claim_limited: true
+
+    M11_output_retry_identity:
+      status: PASS
+      ref: runs/MNE-TARGET-LIFECYCLE-V1-001/mechanical/branch-and-output-identities.yaml
+      missing_selected_scenario_result_identity: false
+      retries: []
+      overwritten_prior_attempts: false
+
+  objective_critical_failures: []
+  protocol_discrepancies:
+    - V1-PROTOCOL-DISCREPANCY-001
+  unresolved_semantic_or_protocol_classification:
+    - V1-PROTOCOL-DISCREPANCY-001
+  clean_mechanical_pass_available: false
+  reason_clean_pass_unavailable: M3_fixture_root_README_allowlist_discrepancy_requires_fresh_Pro_classification
