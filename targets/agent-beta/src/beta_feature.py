@@ -3,4 +3,4 @@ def beta_feature(value: str) -> str:
 
 
 def sort_invoices(invoices):
-    return list(invoices)
+    return sorted(invoices, key=lambda item: (item["due_date"], item["invoice_id"]))
