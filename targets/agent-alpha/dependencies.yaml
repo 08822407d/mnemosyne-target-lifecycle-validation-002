@@ -1,0 +1,9 @@
+dependencies:
+  common-lib:
+    version: 1.0.0
+    usage:
+      - parse_record(text, strict=false)
+      - legacy_mode=true
+      - None_return_means_parse_failure
+  common-schema:
+    version: 1
