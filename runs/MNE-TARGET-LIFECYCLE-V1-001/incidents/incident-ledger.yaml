@@ -1,0 +1,26 @@
+incident_ledger:
+  run_id: MNE-TARGET-LIFECYCLE-V1-001
+  incidents:
+    - incident_id: V1-PROTOCOL-DISCREPANCY-001
+      phase: mechanical_closeout
+      scenario_id: fixture_setup
+      class: protocol
+      description: >-
+        The V1 execution-package fixture branch contract lists allowed_write_roots that omit repository-root README.md,
+        while the same contract's frozen initial fixture tree explicitly requires README.md. The executor created README.md
+        because it is explicitly required by the frozen fixture tree. This is an internal profile/write-set discrepancy and is
+        not silently normalized by the next-tier controller.
+      first_detected_at: 2026-08-15
+      affected_artifacts:
+        - notes/target-agent-lifecycle-v1-execution-package-001/00-controller-fixture-and-branch-contract.md
+        - tlr-v1-fixture-base@81f18eb5dcc6a6e68e496f67ae8f8eae782226e6
+        - README.md
+      contamination_scope: fixture_write_set_accounting_only
+      immediate_action: preserve_execution_and_route_exact_discrepancy_to_fresh_Pro; no_semantic_repair_or_rerun_performed
+      preserved_attempt_refs:
+        - tlr-v1-fixture-base@81f18eb5dcc6a6e68e496f67ae8f8eae782226e6
+      retry_allowed: false_pending_fresh_Pro_classification
+      adjudication_required: true
+  execution_incidents: []
+  retries: []
+  hidden_or_discarded_attempts: false
