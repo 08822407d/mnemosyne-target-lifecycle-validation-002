@@ -1,0 +1,31 @@
+v1_controller_receive:
+  run_id: MNE-TARGET-LIFECYCLE-V1-001
+  execution_package_id: MNE-TARGET-LIFECYCLE-V1-EXECUTION-PACKAGE-001
+  Owner_authorization_ref: MNE-TARGET-LIFECYCLE-V1-RUN-AUTHORIZATION-001
+  Mnemosyne_master: 1a61414bbe86a9a1b2a37c2ae1d22caf21c39dea
+  source_blobs:
+    candidate: 1eaeffaf01b3eae878cd0a97cb5d1884b7dba3cc
+    validation: 364482a28ab9218c3a6beddb072be2545779132f
+    frozen_package_README: 444b7e7186e6e90002a1b9966bc69ff0e1b49aaa
+    frozen_package_01: d94d95bb196ee708e56e93c7f67404b524d65e35
+    frozen_package_02: 1abacc24f4c6da9b81b877a67b81b615f15144d8
+    frozen_package_03: d572c384d26777c8dd3c9f8ea49edc1a2e711b7d
+    frozen_package_04: f4e31cd982ffe2716434599b633d01e360d0b57f
+    V0_adjudication: 6caf5f67cdc3e210e009f442b257f02cfc3d70f8
+    V1_decision_candidate: 42bb0415243a7ffa7658d57bb6a651c86f5fb991
+    V1_authorization: 361b3d110f41f53098ccbd6f8705c494fc2df0b6
+    V1_execution_README: 2dcccd37c42f0ea8e9e6dfef4fed6c59e915fe59
+    V1_controller_contract: 7068b5efc0d484baf48824c5692ee1b3b2d8a634
+  synthetic_repository: 08822407d/mnemosyne-target-lifecycle-validation-002
+  visibility: public
+  V0_final_head_expected: e8e3296922185b4b70997c2351d6f39423f2cd4f
+  V0_final_head_observed: e8e3296922185b4b70997c2351d6f39423f2cd4f
+  selected_scenarios: [S1,S2,S3,S4,S5,S6,S7,S8,S9,S11]
+  excluded: [S10,V2]
+  product_surface: standard_ChatGPT_conversation_with_GitHub_connector
+  visible_selection_verbatim: gpt5.6sol xhigh
+  separate_reasoning_setting_verbatim: not_separately_reported
+  backend_status: unknown_or_not_attestable
+  allowed_writes: synthetic_repository_execution_profile_only
+  prohibited_writes: [08822407d/Mnemosyne,08822407d/Meta-Agent,unnamed_real_targets]
+  disposition: PASS
