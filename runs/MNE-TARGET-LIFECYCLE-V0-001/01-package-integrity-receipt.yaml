@@ -1,0 +1,34 @@
+package_integrity_receipt:
+  run_id: MNE-TARGET-LIFECYCLE-V0-001
+  package_commit: 930b5ed0c8d1db82e46fd9439035db3f2dd20c46
+  required_files_present: true
+  source_refs_match: true
+  semantic_boundaries_match: true
+  scenario_inventory_match: true
+  authorization_remains_ungranted_by_package_files: true
+  owner_run_authorization_present_separately: true
+  owner_run_authorization_ref: MNE-TARGET-LIFECYCLE-V0-RUN-AUTHORIZATION-001
+  material_safety_pass: true
+  mechanical_evidence_contract_pass: true
+  output_contract_pass: true
+  exact_input_identities:
+    candidate_blob: 1eaeffaf01b3eae878cd0a97cb5d1884b7dba3cc
+    validation_blob: 364482a28ab9218c3a6beddb072be2545779132f
+    package_README_blob: 444b7e7186e6e90002a1b9966bc69ff0e1b49aaa
+    package_00_blob: ec2016fe4a424c580318d7d725e5d3843c85559e
+    package_01_blob: d94d95bb196ee708e56e93c7f67404b524d65e35
+    package_02_blob: 1abacc24f4c6da9b81b877a67b81b615f15144d8
+    package_03_blob: d572c384d26777c8dd3c9f8ea49edc1a2e711b7d
+    package_04_blob: f4e31cd982ffe2716434599b633d01e360d0b57f
+    package_05_blob: 47c3f0a3bbc3b5b63b03e137aaa814a20dc1aa29
+    package_06_blob: 7582ee1a2777e8374a18a189d5b267a2f714fefc
+    authorization_blob: 25e330445c18cdd0833411d259a093c7a3ccfc61
+  scenario_inventory:
+    S0_through_S11_present: true
+    S10_exploratory: true
+    V0_authorized_substantive_scenarios: 0
+  preserved_deferrals:
+    TLR_03_detailed_taxonomy_not_invented: true
+    TLR_04_parent_minimum_not_invented: true
+  defects: []
+  disposition: PASS
