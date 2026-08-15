@@ -1,0 +1,11 @@
+S8_isolation_receipt:
+  scenario_id: S8
+  branch: tlr-v1-s8-insufficient-docs
+  base_commit: 81f18eb5dcc6a6e68e496f67ae8f8eae782226e6
+  prepared_before_S7_execution: true
+  sufficient_guide_added_to_branch: false
+  CommonLib_v2_API_source_tests_added_to_branch: false
+  exact_hidden_migration_facts_in_worker_packet: false
+  S7_commits_in_history: false
+  worker_conversation_freshness: pending_operator_launch_attestation
+  disposition: PASS_PREPARED_PENDING_FRESH_WORKER

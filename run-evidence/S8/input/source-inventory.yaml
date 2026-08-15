@@ -1,0 +1,21 @@
+scenario_id: S8
+authorized_branch: tlr-v1-s8-insufficient-docs
+allowed_worker_inputs:
+  - run-evidence/S8/input/worker-task.md
+  - run-evidence/S8/input/authorization-receipt.yaml
+  - run-evidence/S8/input/source-inventory.yaml
+  - run-evidence/S8/input/isolation-receipt.yaml
+  - libraries/common-lib/docs/CHANGES-HUMAN.md
+  - libraries/common-lib/VERSION
+  - targets/agent-alpha/authority.yaml
+  - targets/agent-alpha/current.md
+  - targets/agent-alpha/requirements/
+  - targets/agent-alpha/src/
+  - targets/agent-alpha/tests/
+  - targets/agent-alpha/dependencies.yaml
+forbidden_sources:
+  - any S7 branch or S7 result
+  - sufficient CommonLib Agent migration guide
+  - CommonLib v2 API/source/tests
+  - frozen package section containing concrete v2 migration contract
+  - summaries containing concrete hidden migration actions

@@ -1,3 +1,3 @@
 # CommonLib human-facing changes
 
-Initial synthetic v1 baseline.
+Updated parser behavior and cleaned up old configuration.

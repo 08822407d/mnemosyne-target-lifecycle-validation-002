@@ -1,0 +1,9 @@
+run_id: MNE-TARGET-LIFECYCLE-V1-001
+scenario_id: S8
+task_id: TLR-V1-S8-001
+Owner_authorization_ref: MNE-TARGET-LIFECYCLE-V1-RUN-AUTHORIZATION-001
+branch: tlr-v1-s8-insufficient-docs
+base_fixture_commit: 81f18eb5dcc6a6e68e496f67ae8f8eae782226e6
+allowed_worker_write_root: run-evidence/S8/output/
+Alpha_write_authorized: false
+S7_or_hidden_contract_read_authorized: false
