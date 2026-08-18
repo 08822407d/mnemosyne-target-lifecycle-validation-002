@@ -1,0 +1,76 @@
+package_and_material_receipt:
+  run_id: MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-V2A-SENTINEL-001
+  controlling_package_id: MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-V2A-SENTINEL-PACKAGE-003
+  inherited_package_id: MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-V2A-SENTINEL-PACKAGE-002
+  decision_candidate:
+    path: notes/validation-run-decisions/MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-V2A-SENTINEL-RUN-DECISION-CANDIDATE-003.md
+    expected_blob: 9e46dd849c3c8604f5e2fa7fce9c02c5504ff202
+    observed_blob: 9e46dd849c3c8604f5e2fa7fce9c02c5504ff202
+    result: PASS
+  source_manifest:
+    path: notes/cross-repository-safe-concurrency-v2a-sentinel-execution-package-003/01-package-and-source-manifest.md
+    expected_blob: 967c7a9ce38883ab897bf856fa4004b987e7d911
+    observed_blob: 967c7a9ce38883ab897bf856fa4004b987e7d911
+    result: PASS
+  source_blob_checks:
+    - {path: current/human-approved-spec.md, expected_blob: 01f64a8223677829320c66dd46d3f172cc9155cc, observed_blob: 01f64a8223677829320c66dd46d3f172cc9155cc, role: execution_source, result: PASS}
+    - {path: current/github-single-active-pr-lineage-guard.md, expected_blob: 042efe9e353097a17eea38d0bcb0ff1da7c4385e, observed_blob: 042efe9e353097a17eea38d0bcb0ff1da7c4385e, role: branch_PR_guard, result: PASS}
+    - {path: current/run-context-and-pr-provenance-guard.md, expected_blob: 0e588b3f6789d0d941221d33c3eaba1561f6e2a3, observed_blob: 0e588b3f6789d0d941221d33c3eaba1561f6e2a3, role: provenance_guard, result: PASS}
+    - {path: current/user-operation-next-step-capability-and-intent-guard.md, expected_blob: 265d61aad34c9e55006647c9e12d77c4214310ea, observed_blob: 265d61aad34c9e55006647c9e12d77c4214310ea, role: user_operation_and_capability_guard, result: PASS}
+    - {path: notes/owner-decision-results/MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-OWNER-DECISION-001.md, expected_blob: 4d59e6edefb5f166261dca353f4552e9346d0f8a, observed_blob: 4d59e6edefb5f166261dca353f4552e9346d0f8a, role: Owner_Option_A_decision, result: PASS}
+    - {path: notes/research-adjudications/MNE-DR-005-CROSS-REPOSITORY-SAFE-CONCURRENCY-PRO-ADJUDICATION-001.md, expected_blob: 27d607257bb1700d9ff9c73f0048a6a7b7847746, observed_blob: 27d607257bb1700d9ff9c73f0048a6a7b7847746, role: fresh_Pro_F2_adjudication, result: PASS}
+    - {path: notes/cross-repository-safe-concurrency-and-ordered-work-amendment-candidate-v0.1.md, expected_blob: 46fd66dc23d6615ea167e0950de970cc316c056b, observed_blob: 46fd66dc23d6615ea167e0950de970cc316c056b, role: Owner_accepted_provisional_amendment, result: PASS}
+    - {path: notes/validation-designs/cross-repository-safe-concurrency-v2-staged-validation-v0.1.md, expected_blob: f66678c0ebdc28a9407553b918838256e6e633a4, observed_blob: f66678c0ebdc28a9407553b918838256e6e633a4, role: staged_V2_design, result: PASS}
+  package_files:
+    - {path: notes/cross-repository-safe-concurrency-v2a-sentinel-execution-package-003/README.md, expected_blob: 28280a2203fbb5d858954d095981602a4502b4e4, observed_blob: 28280a2203fbb5d858954d095981602a4502b4e4, result: PASS}
+    - {path: notes/cross-repository-safe-concurrency-v2a-sentinel-execution-package-003/00-delta-precedence-and-provenance-contract.md, expected_blob: 96db07f2ab9b3239eb3c0b1ded58e15538765744, observed_blob: 96db07f2ab9b3239eb3c0b1ded58e15538765744, result: PASS}
+    - {path: notes/cross-repository-safe-concurrency-v2a-sentinel-execution-package-003/01-package-and-source-manifest.md, expected_blob: 967c7a9ce38883ab897bf856fa4004b987e7d911, observed_blob: 967c7a9ce38883ab897bf856fa4004b987e7d911, result: PASS}
+    - {path: notes/cross-repository-safe-concurrency-v2a-sentinel-execution-package-003/02-next-tier-controller-amendment.md, expected_blob: e3fa54205e1fa93116c52f515a4661b955e1d6bc, observed_blob: e3fa54205e1fa93116c52f515a4661b955e1d6bc, result: PASS}
+    - {path: notes/cross-repository-safe-concurrency-v2a-sentinel-execution-package-003/03-startup-message.md, expected_blob: dfb75bc9e2fda1ccba82f41eecd33459b71f495e, observed_blob: dfb75bc9e2fda1ccba82f41eecd33459b71f495e, result: PASS}
+    - {path: notes/cross-repository-safe-concurrency-v2a-sentinel-execution-package-003/04-integrity-checklist.md, expected_blob: 6741824758f6037443eb272da16c0847e6ea4d8d, observed_blob: 6741824758f6037443eb272da16c0847e6ea4d8d, result: PASS}
+    - {path: notes/validation-run-decisions/MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-V2A-SENTINEL-RUN-DECISION-CANDIDATE-002.md, expected_blob: 78185751607cf4bd1930710bf1e5e84c9235bb33, observed_blob: 78185751607cf4bd1930710bf1e5e84c9235bb33, result: PASS}
+    - {path: notes/cross-repository-safe-concurrency-v2a-sentinel-execution-package-002/README.md, expected_blob: 3a4bb50cd8c2d89027690f0bc196eba7bf0bbebe, observed_blob: 3a4bb50cd8c2d89027690f0bc196eba7bf0bbebe, result: PASS}
+    - {path: notes/cross-repository-safe-concurrency-v2a-sentinel-execution-package-002/00-controller-receive-and-surface-contract.md, expected_blob: 3ee4276afcabfce3986b44a24ba0b2cdced239ba, observed_blob: 3ee4276afcabfce3986b44a24ba0b2cdced239ba, result: PASS}
+    - {path: notes/cross-repository-safe-concurrency-v2a-sentinel-execution-package-002/01-package-and-source-manifest.md, expected_blob: f41a16d9da165a161ef9148994ef025f9cd3a806, observed_blob: f41a16d9da165a161ef9148994ef025f9cd3a806, result: PASS}
+    - {path: notes/cross-repository-safe-concurrency-v2a-sentinel-execution-package-002/02-next-tier-controller-task.md, expected_blob: 89382a949fbcfa0542679553b5a245137512e1ce, observed_blob: 89382a949fbcfa0542679553b5a245137512e1ce, result: PASS}
+    - {path: notes/cross-repository-safe-concurrency-v2a-sentinel-execution-package-002/03-mechanical-checks-and-result-template.md, expected_blob: b615be7a3c05b3c5dd5d40e0e5cadc7a581cb0c6, observed_blob: b615be7a3c05b3c5dd5d40e0e5cadc7a581cb0c6, result: PASS}
+    - {path: notes/cross-repository-safe-concurrency-v2a-sentinel-execution-package-002/04-startup-message.md, expected_blob: 5bb7053653d23a47ef113db36ef85d8bbc83884d, observed_blob: 5bb7053653d23a47ef113db36ef85d8bbc83884d, result: PASS}
+    - {path: notes/cross-repository-safe-concurrency-v2a-sentinel-execution-package-002/05-package-integrity-and-non-execution-checklist.md, expected_blob: c573d4c7b2e2558b482e0372b2d5310d79168814, observed_blob: c573d4c7b2e2558b482e0372b2d5310d79168814, result: PASS}
+    - {path: notes/cross-repository-safe-concurrency-v2-validation-package-v0.1/README.md, expected_blob: 3429f981f9b7dc0900dff4d356f9a001c280f1e6, observed_blob: 3429f981f9b7dc0900dff4d356f9a001c280f1e6, result: PASS}
+    - {path: notes/cross-repository-safe-concurrency-v2-validation-package-v0.1/00-owner-gates-and-stage-boundaries.md, expected_blob: fd56c6710ba4aa76e2e962693e3f97bb35ffb175, observed_blob: fd56c6710ba4aa76e2e962693e3f97bb35ffb175, result: PASS}
+    - {path: notes/cross-repository-safe-concurrency-v2-validation-package-v0.1/01-synthetic-fixture-and-scenario-contracts.md, expected_blob: 19235ec7110f6ad4f529a09400f00a7b00240934, observed_blob: 19235ec7110f6ad4f529a09400f00a7b00240934, result: PASS}
+    - {path: notes/cross-repository-safe-concurrency-v2-validation-package-v0.1/02-v2-a-core-concurrency-taskbook.md, expected_blob: c36ac4604dea9ebe1bef00d30bea684db775f687, observed_blob: c36ac4604dea9ebe1bef00d30bea684db775f687, result: PASS}
+    - {path: notes/cross-repository-safe-concurrency-v2-validation-package-v0.1/03-v2-b-ordered-cross-repository-taskbook.md, expected_blob: 836afd993d19d444a22d75704977c0de8f3383a4, observed_blob: 836afd993d19d444a22d75704977c0de8f3383a4, result: PASS}
+    - {path: notes/cross-repository-safe-concurrency-v2-validation-package-v0.1/04-v2-c-connector-security-design-only.md, expected_blob: f99c761245c4c3a5d2229d084fb0fb400b9e7360, observed_blob: f99c761245c4c3a5d2229d084fb0fb400b9e7360, result: PASS}
+    - {path: notes/cross-repository-safe-concurrency-v2-validation-package-v0.1/05-mechanical-checks-and-evidence-rubric.md, expected_blob: 59082fb32c1e38d48878bc5f4b4f4faa561e44cb, observed_blob: 59082fb32c1e38d48878bc5f4b4f4faa561e44cb, result: PASS}
+    - {path: notes/cross-repository-safe-concurrency-v2-validation-package-v0.1/06-run-manifest-and-result-template.md, expected_blob: 17494c9bf86a8782f5a3a91c6a33dd14aa27e5a8, observed_blob: 17494c9bf86a8782f5a3a91c6a33dd14aa27e5a8, result: PASS}
+    - {path: notes/cross-repository-safe-concurrency-v2-validation-package-v0.1/07-package-integrity-and-non-execution-checklist.md, expected_blob: c7ee1083a9b84d7d070dfec7a9bd65655750b4a9, observed_blob: c7ee1083a9b84d7d070dfec7a9bd65655750b4a9, result: PASS}
+    - {path: notes/adjudications/MNEMOSYNE-224-PACKAGE-002-FRESH-PRO-REVIEW-001.md, expected_blob: 6881ff8778d27c883f68aff77e77236edbc6a234, observed_blob: 6881ff8778d27c883f68aff77e77236edbc6a234, result: PASS}
+    - {path: notes/run-context-incidents/MNEMOSYNE-224-OPERATOR-SELECTION-MISREPRESENTATION-001.md, expected_blob: 5b22b5e5e014922745088aa029b92238439d4037, observed_blob: 5b22b5e5e014922745088aa029b92238439d4037, result: PASS}
+  fixture:
+    repository: 08822407d/mnemosyne-target-lifecycle-validation-002
+    ref: tlr-v1-fixture-base
+    expected_commit: 81f18eb5dcc6a6e68e496f67ae8f8eae782226e6
+    observed_commit: 81f18eb5dcc6a6e68e496f67ae8f8eae782226e6
+    expected_tree: f1e221ce8aef404579b96adb3ab01319016889db
+    observed_tree: f1e221ce8aef404579b96adb3ab01319016889db
+    result: PASS
+  material_inspection:
+    inspected_paths:
+      - README.md@81f18eb5dcc6a6e68e496f67ae8f8eae782226e6
+      - run-evidence/fixture/fixture-inputs.yaml@81f18eb5dcc6a6e68e496f67ae8f8eae782226e6
+      - commit-level changed-file inventory@81f18eb5dcc6a6e68e496f67ae8f8eae782226e6
+    method: static inspection of the exact pinned public synthetic fixture commit and its declared fixture metadata
+    mechanical_scan:
+      executed: false
+      scope: none
+      artifact_ref: null
+      result: NOT_APPLICABLE
+    observed_declarations:
+      material_class: public_synthetic_only
+      contains_private_or_real_material: false
+      contains_credentials_or_secrets: false
+    limitations:
+      - no exhaustive secret scan was run or claimed
+      - classification is bounded to the exact inspected fixture commit and identified paths
+  receipt_result: PASS
