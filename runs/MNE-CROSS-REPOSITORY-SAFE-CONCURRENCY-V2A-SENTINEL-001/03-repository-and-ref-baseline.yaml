@@ -1,69 +1,86 @@
 repository_and_ref_baseline:
   run_id: MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-V2A-SENTINEL-001
-  time_window:
-    before_started_at: "2026-08-18T10:06:00+08:00"
-    after_completed_at: pending_post_bundle_read_only_check
-    timestamp_limit: before time is conversation runtime context, not a GitHub-signed event timestamp
+  execution_window:
+    before_context_local_time: "2026-08-18T10:06:00+08:00"
+    after_check_phase: post_seven_file_bundle_before_result_finalization
+    timestamp_limit: before time is conversation runtime context; after-check completion has no independent GitHub-signed wall-clock receipt
   Owner_authorized_execution_window_refs:
     Mnemosyne_master: 9b5a3a16d83f6cabc341445d70d350e3391d1daf
     Meta_Agent_master: 1fdbd7af9437f72f7c8106714ad1e64908983fb7
   observed_external_refs:
     Mnemosyne_before: 9b5a3a16d83f6cabc341445d70d350e3391d1daf
-    Mnemosyne_after: pending_post_bundle_read_only_check
+    Mnemosyne_after: 9b5a3a16d83f6cabc341445d70d350e3391d1daf
+    Mnemosyne_unchanged: true
     Meta_Agent_before: 1fdbd7af9437f72f7c8106714ad1e64908983fb7
-    Meta_Agent_after: pending_post_bundle_read_only_check
+    Meta_Agent_after: 1fdbd7af9437f72f7c8106714ad1e64908983fb7
+    Meta_Agent_unchanged: true
   validation_refs:
-    - {ref: master, expected_before: e8e3296922185b4b70997c2351d6f39423f2cd4f, observed_before: e8e3296922185b4b70997c2351d6f39423f2cd4f, observed_after: pending, result: PASS_BEFORE}
-    - {ref: tlr-v1-controller, expected_before: e892749fc9e242b24908f89b6a78f1c0f0bed75e, observed_before: e892749fc9e242b24908f89b6a78f1c0f0bed75e, observed_after: pending, result: PASS_BEFORE}
-    - {ref: tlr-v1-fixture-base, expected_before: 81f18eb5dcc6a6e68e496f67ae8f8eae782226e6, observed_before: 81f18eb5dcc6a6e68e496f67ae8f8eae782226e6, observed_after: pending, result: PASS_BEFORE}
-    - {ref: tlr-v1-s1-destination-block, expected_before: d20f1239784f88072399a3c874800f6c94c0ad2c, observed_before: d20f1239784f88072399a3c874800f6c94c0ad2c, observed_after: pending, result: PASS_BEFORE}
-    - {ref: tlr-v1-s2-bounded-writer, expected_before: b0923aedf551262f0b24409611824c526252982f, observed_before: b0923aedf551262f0b24409611824c526252982f, observed_after: pending, result: PASS_BEFORE}
-    - {ref: tlr-v1-s3-alpha, expected_before: 1a8496893260f35b0b06d32d6b2128a192489ae7, observed_before: 1a8496893260f35b0b06d32d6b2128a192489ae7, observed_after: pending, result: PASS_BEFORE}
-    - {ref: tlr-v1-s3-beta, expected_before: 9a77045e77856a25336a664840aeaa984cdb8886, observed_before: 9a77045e77856a25336a664840aeaa984cdb8886, observed_after: pending, result: PASS_BEFORE}
-    - {ref: tlr-v1-s4-alpha-dependent, expected_before: 4861cc27e8960353f29af9ca5cfa0927430b89ad, observed_before: 4861cc27e8960353f29af9ca5cfa0927430b89ad, observed_after: pending, result: PASS_BEFORE}
-    - {ref: tlr-v1-s4-shared-schema, expected_before: 2aa6c0a8a7ac39ab1d3e06a64006e83aff20b5aa, observed_before: 2aa6c0a8a7ac39ab1d3e06a64006e83aff20b5aa, observed_after: pending, result: PASS_BEFORE}
-    - {ref: tlr-v1-s4-unknown-global, expected_before: c77f20f0320313d1ccb2b4d1272dfa0daba8ef77, observed_before: c77f20f0320313d1ccb2b4d1272dfa0daba8ef77, observed_after: pending, result: PASS_BEFORE}
-    - {ref: tlr-v1-s5-upstream-proposal, expected_before: 8bfd56e5800566b048702d8b8a89e3bd05f9e6e9, observed_before: 8bfd56e5800566b048702d8b8a89e3bd05f9e6e9, observed_after: pending, result: PASS_BEFORE}
-    - {ref: tlr-v1-s6-beta-requirement, expected_before: e90fcc6633bae50236aa96f9c499ba6c7379f53f, observed_before: e90fcc6633bae50236aa96f9c499ba6c7379f53f, observed_after: pending, result: PASS_BEFORE}
-    - {ref: tlr-v1-s7-alpha-migration, expected_before: be627df6a1e633e8c93f25c056b643b603f1aea8, observed_before: be627df6a1e633e8c93f25c056b643b603f1aea8, observed_after: pending, result: PASS_BEFORE}
-    - {ref: tlr-v1-s7-commonlib-v2, expected_before: 9cfae2953fa8d7b2ff4ab2e14abab263891932de, observed_before: 9cfae2953fa8d7b2ff4ab2e14abab263891932de, observed_after: pending, result: PASS_BEFORE}
-    - {ref: tlr-v1-s8-insufficient-docs, expected_before: d9c4c88aa17d6edf73955054833bd2738709aec9, observed_before: d9c4c88aa17d6edf73955054833bd2738709aec9, observed_after: pending, result: PASS_BEFORE}
-    - {ref: tlr-v1-s9-imperfect-route, expected_before: b16a458339497425387d71c843388ef30aa2eb46, observed_before: b16a458339497425387d71c843388ef30aa2eb46, observed_after: pending, result: PASS_BEFORE}
-    - {ref: tlr-v1-s11-backup-restore, expected_before: 47262b6bf8f89c9ac13d7f488595f8adff250299, observed_before: 47262b6bf8f89c9ac13d7f488595f8adff250299, observed_after: pending, result: PASS_BEFORE}
+    - {ref: master, expected_before: e8e3296922185b4b70997c2351d6f39423f2cd4f, observed_before: e8e3296922185b4b70997c2351d6f39423f2cd4f, observed_after: e8e3296922185b4b70997c2351d6f39423f2cd4f, result: PASS}
+    - {ref: tlr-v1-controller, expected_before: e892749fc9e242b24908f89b6a78f1c0f0bed75e, observed_before: e892749fc9e242b24908f89b6a78f1c0f0bed75e, observed_after: e892749fc9e242b24908f89b6a78f1c0f0bed75e, result: PASS}
+    - {ref: tlr-v1-fixture-base, expected_before: 81f18eb5dcc6a6e68e496f67ae8f8eae782226e6, observed_before: 81f18eb5dcc6a6e68e496f67ae8f8eae782226e6, observed_after: 81f18eb5dcc6a6e68e496f67ae8f8eae782226e6, result: PASS}
+    - {ref: tlr-v1-s1-destination-block, expected_before: d20f1239784f88072399a3c874800f6c94c0ad2c, observed_before: d20f1239784f88072399a3c874800f6c94c0ad2c, observed_after: d20f1239784f88072399a3c874800f6c94c0ad2c, result: PASS}
+    - {ref: tlr-v1-s2-bounded-writer, expected_before: b0923aedf551262f0b24409611824c526252982f, observed_before: b0923aedf551262f0b24409611824c526252982f, observed_after: b0923aedf551262f0b24409611824c526252982f, result: PASS}
+    - {ref: tlr-v1-s3-alpha, expected_before: 1a8496893260f35b0b06d32d6b2128a192489ae7, observed_before: 1a8496893260f35b0b06d32d6b2128a192489ae7, observed_after: 1a8496893260f35b0b06d32d6b2128a192489ae7, result: PASS}
+    - {ref: tlr-v1-s3-beta, expected_before: 9a77045e77856a25336a664840aeaa984cdb8886, observed_before: 9a77045e77856a25336a664840aeaa984cdb8886, observed_after: 9a77045e77856a25336a664840aeaa984cdb8886, result: PASS}
+    - {ref: tlr-v1-s4-alpha-dependent, expected_before: 4861cc27e8960353f29af9ca5cfa0927430b89ad, observed_before: 4861cc27e8960353f29af9ca5cfa0927430b89ad, observed_after: 4861cc27e8960353f29af9ca5cfa0927430b89ad, result: PASS}
+    - {ref: tlr-v1-s4-shared-schema, expected_before: 2aa6c0a8a7ac39ab1d3e06a64006e83aff20b5aa, observed_before: 2aa6c0a8a7ac39ab1d3e06a64006e83aff20b5aa, observed_after: 2aa6c0a8a7ac39ab1d3e06a64006e83aff20b5aa, result: PASS}
+    - {ref: tlr-v1-s4-unknown-global, expected_before: c77f20f0320313d1ccb2b4d1272dfa0daba8ef77, observed_before: c77f20f0320313d1ccb2b4d1272dfa0daba8ef77, observed_after: c77f20f0320313d1ccb2b4d1272dfa0daba8ef77, result: PASS}
+    - {ref: tlr-v1-s5-upstream-proposal, expected_before: 8bfd56e5800566b048702d8b8a89e3bd05f9e6e9, observed_before: 8bfd56e5800566b048702d8b8a89e3bd05f9e6e9, observed_after: 8bfd56e5800566b048702d8b8a89e3bd05f9e6e9, result: PASS}
+    - {ref: tlr-v1-s6-beta-requirement, expected_before: e90fcc6633bae50236aa96f9c499ba6c7379f53f, observed_before: e90fcc6633bae50236aa96f9c499ba6c7379f53f, observed_after: e90fcc6633bae50236aa96f9c499ba6c7379f53f, result: PASS}
+    - {ref: tlr-v1-s7-alpha-migration, expected_before: be627df6a1e633e8c93f25c056b643b603f1aea8, observed_before: be627df6a1e633e8c93f25c056b643b603f1aea8, observed_after: be627df6a1e633e8c93f25c056b643b603f1aea8, result: PASS}
+    - {ref: tlr-v1-s7-commonlib-v2, expected_before: 9cfae2953fa8d7b2ff4ab2e14abab263891932de, observed_before: 9cfae2953fa8d7b2ff4ab2e14abab263891932de, observed_after: 9cfae2953fa8d7b2ff4ab2e14abab263891932de, result: PASS}
+    - {ref: tlr-v1-s8-insufficient-docs, expected_before: d9c4c88aa17d6edf73955054833bd2738709aec9, observed_before: d9c4c88aa17d6edf73955054833bd2738709aec9, observed_after: d9c4c88aa17d6edf73955054833bd2738709aec9, result: PASS}
+    - {ref: tlr-v1-s9-imperfect-route, expected_before: b16a458339497425387d71c843388ef30aa2eb46, observed_before: b16a458339497425387d71c843388ef30aa2eb46, observed_after: b16a458339497425387d71c843388ef30aa2eb46, result: PASS}
+    - {ref: tlr-v1-s11-backup-restore, expected_before: 47262b6bf8f89c9ac13d7f488595f8adff250299, observed_before: 47262b6bf8f89c9ac13d7f488595f8adff250299, observed_after: 47262b6bf8f89c9ac13d7f488595f8adff250299, result: PASS}
+  V1_inventory_name_set:
+    expected_count: 16
+    observed_after_count: 16
+    unexpected_names_after: []
+    missing_names_after: []
+    result: PASS
   fixture_tree:
     expected_before: f1e221ce8aef404579b96adb3ab01319016889db
     observed_before: f1e221ce8aef404579b96adb3ab01319016889db
-    observed_after: pending
+    observed_after: f1e221ce8aef404579b96adb3ab01319016889db
+    result: PASS
   controller_branch:
     expected_absent_before: true
     observed_absent_before: true
     creation_parent: e8e3296922185b4b70997c2351d6f39423f2cd4f
     observed_head_after_creation: e8e3296922185b4b70997c2351d6f39423f2cd4f
-    final_head: pending_finalization
-  open_PRs_before: []
-  equivalent_A0_lineage_before: []
+    seven_file_bundle_head: fa8217461d45e7f0a04b2b8d8c9d719b828f5d8c
+    final_head: finalized_later_on_same_authorized_paths_and_returned_in_external_handoff
+  output_diff_at_seven_file_bundle:
+    base: e8e3296922185b4b70997c2351d6f39423f2cd4f
+    head: fa8217461d45e7f0a04b2b8d8c9d719b828f5d8c
+    ahead_by: 7
+    behind_by: 0
+    changed_path_count: 7
+    unexpected_paths: []
+    result: PASS
+  lineage_and_PR_checks_after:
+    branches_matching_v2a_sentinel_001:
+      - v2a-sentinel-001-controller
+    worker_or_fixture_branch_created: false
+    controller_branch_PRs: []
+    run_id_PRs: []
+    validation_open_PRs: []
+    equivalent_A0_lineage: []
+    result: PASS
   known_Mnemosyne_parallel_route_check:
     checked_lineage: mnemosyne-225-f1-bounded-validation-design-and-next-step-write-visibility
     PR_293_state: closed_merged
-    branch_present_before: false
-    Mnemosyne_open_PRs_before: []
+    branch_present_after: false
+    Mnemosyne_open_PRs_after: []
     result: PASS_no_known_expected_publication_route
-  open_PRs_after: pending_post_bundle_read_only_check
   claim_scope:
     named_repositories:
       - 08822407d/Mnemosyne
       - 08822407d/Meta-Agent
       - 08822407d/mnemosyne-target-lifecycle-validation-002
-    named_refs:
-      - Mnemosyne/master
-      - Meta-Agent/master
-      - validation/master
-      - validation/tlr-v1-fixture-base
-      - validation/all_16_frozen_tlr-v1-refs
-      - validation/v2a-sentinel-001-controller
     accessible_action_surfaces:
       - GitHub_connector_repository_branch_file_commit_and_PR_operations
     limitations:
-      - observations are point-in-time GitHub reads and not a global concurrency lock
-      - after fields are finalized only after the seven-file bundle exists
-  baseline_result: PASS_PENDING_POST_BUNDLE_AFTER_CHECKS
+      - observations are point-in-time GitHub reads and not a platform-global concurrency lock
+      - the controller branch continues to move only while finalizing the same authorized result paths; final head is externally handed off after the last write
+  baseline_result: PASS
