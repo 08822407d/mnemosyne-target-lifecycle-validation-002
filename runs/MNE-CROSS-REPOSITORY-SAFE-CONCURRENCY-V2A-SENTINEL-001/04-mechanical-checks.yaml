@@ -1,0 +1,38 @@
+mechanical_checks:
+  run_id: MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-V2A-SENTINEL-001
+  S0_Owner_authorization_identity: PASS
+  S1_product_model_surface: PASS
+  S2_publication_source_binding_separation: PASS
+  S3_load_bearing_source_blobs: PASS
+  S4_execution_window_external_refs_before: PASS
+  S5_validation_repository_identity: PASS
+  S6_fixture_identity: PASS
+  S7_V1_ref_inventory: PASS
+  S8_controller_lineage_absence: PASS
+  S9_controller_branch_parent: PASS
+  S10_exact_output_path_set: PENDING_POST_BUNDLE_CHECK
+  S11_output_completeness_and_identities: PENDING_POST_BUNDLE_CHECK
+  S12_validation_refs_unchanged: PENDING_POST_BUNDLE_CHECK
+  S13_external_refs_unchanged: PENDING_POST_BUNDLE_CHECK
+  S14_no_worker_branch_or_PR: PENDING_POST_BUNDLE_CHECK
+  S15_material_safety: PASS
+  S16_no_unselected_tools_or_quota: PASS
+  S17_no_hidden_continuation: PASS
+  S18_bounded_claim_discipline: PASS
+  S19_final_stop_state: PENDING_FINAL_STOP
+  model_selection_binding:
+    Owner_authorized_visible_label: "gpt-5.6 sol extra high"
+    operator_selected_visible_label: "gpt-5.6 sol extra high"
+    exact_raw_string_match: true
+    Owner_evidence_class: direct_user_instruction
+    operator_evidence_class: operator_reported
+    backend_identity: unknown_or_not_attestable
+  tool_surface_incident:
+    incident_id: A0-TOOL-001
+    classification: tool_or_product_limitation
+    required_evidence_recovered_without_retry: true
+    repository_side_effect: none
+    fresh_Pro_review_required: true
+  all_mandatory_checks_accounted_for: false_pending_post_bundle_checks
+  disputed_checks: []
+  overall_mechanical_disposition: PENDING_POST_BUNDLE_CHECK
