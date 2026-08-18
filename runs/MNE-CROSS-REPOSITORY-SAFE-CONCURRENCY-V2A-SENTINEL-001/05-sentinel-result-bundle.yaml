@@ -1,0 +1,58 @@
+sentinel_result_bundle:
+  run_id: MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-V2A-SENTINEL-001
+  controlling_package_id: MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-V2A-SENTINEL-PACKAGE-003
+  inherited_package_id: MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-V2A-SENTINEL-PACKAGE-002
+  decision_candidate_blob: 9e46dd849c3c8604f5e2fa7fce9c02c5504ff202
+  source_manifest_blob: 967c7a9ce38883ab897bf856fa4004b987e7d911
+  selected_scope:
+    stage: V2_A
+    cells: [A0]
+    sentinel_only: true
+  model_selection_binding_result:
+    Owner_authorized_visible_model_label: "gpt-5.6 sol extra high"
+    operator_selected_visible_model_label: "gpt-5.6 sol extra high"
+    exact_match: true
+    evidence_refs:
+      - current_conversation_owner_G2A_startup_message:direct_user_instruction
+      - current_conversation_owner_G2A_startup_message:operator_reported_actual_selection
+    backend_identity: unknown_or_not_attestable
+  controller_branch:
+    name: v2a-sentinel-001-controller
+    exact_creation_parent: e8e3296922185b4b70997c2351d6f39423f2cd4f
+    initial_head_after_creation: e8e3296922185b4b70997c2351d6f39423f2cd4f
+    final_head: pending_post_bundle_finalization
+  exact_output_path_set:
+    - runs/MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-V2A-SENTINEL-001/00-controller-receive.yaml
+    - runs/MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-V2A-SENTINEL-001/01-product-and-permission-receipt.yaml
+    - runs/MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-V2A-SENTINEL-001/02-package-and-material-receipt.yaml
+    - runs/MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-V2A-SENTINEL-001/03-repository-and-ref-baseline.yaml
+    - runs/MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-V2A-SENTINEL-001/04-mechanical-checks.yaml
+    - runs/MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-V2A-SENTINEL-001/incidents/incident-ledger.yaml
+    - runs/MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-V2A-SENTINEL-001/05-sentinel-result-bundle.yaml
+  prior_output_identities_at_bundle_creation:
+    - {path: runs/MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-V2A-SENTINEL-001/00-controller-receive.yaml, blob: 07c84ba87bf0b995ab52c9bdb39f3eec0f914910, creation_commit: 93d7686a3a09976a1146c9c0810dc9eab6774764}
+    - {path: runs/MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-V2A-SENTINEL-001/01-product-and-permission-receipt.yaml, blob: 0d31d6895b01a749ab715aa6dcf8e69ba2595037, creation_commit: 5e85d44a9c8f4697bd2c325bb462262a1dba90ac}
+    - {path: runs/MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-V2A-SENTINEL-001/02-package-and-material-receipt.yaml, blob: ad227d43d2eb0d74bf5938b50d220141ff6fdfdf, creation_commit: ac0696f5139fa6e6e7a0e9c896c7fe0c7a2fd2ca}
+    - {path: runs/MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-V2A-SENTINEL-001/03-repository-and-ref-baseline.yaml, blob: 0ba5315945ed7c3f43a3b2e0eeba75944a1414cf, creation_commit: b7da002009af1d457bcf5ac3329ac1b37aebb4c8, status: preliminary_pending_after_checks}
+    - {path: runs/MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-V2A-SENTINEL-001/04-mechanical-checks.yaml, blob: 36237283abd27c41a705153352ba1bb86f14de48, creation_commit: ca46327d6b4c420293d0ed29979529326b7eb0b4, status: preliminary_pending_after_checks}
+    - {path: runs/MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-V2A-SENTINEL-001/incidents/incident-ledger.yaml, blob: d5df2e14288e606e89985f8ee16b8de73de5889f, creation_commit: 4a454a6e4478b7bab0b01bc2bdace712af75891f}
+  self_identity:
+    final_blob: non_recursive_external_handoff_after_final_write
+    final_update_commit: non_recursive_external_handoff_after_final_write
+  protected_ref_after_checks: pending_post_bundle_read_only_check
+  validation_ref_after_checks: pending_post_bundle_read_only_check
+  exact_output_diff_check: pending_post_bundle_read_only_check
+  worker_or_PR_creation_check: pending_post_bundle_read_only_check
+  incident_summary:
+    count: 1
+    bounded_incident_ids: [A0-TOOL-001]
+    prohibited_side_effect_incidents: 0
+    automatic_retries: 0
+  limitations:
+    - the result-bundle file cannot recursively contain its own final blob and final update commit; those identities are returned in the external fresh-Pro handoff
+    - post-bundle checks are finalized after all seven paths exist, then this file is finalized on the same authorized path
+    - GitHub point-in-time checks are not a platform-global lock
+    - hidden model backend identity is unknown_or_not_attestable
+    - fixture material inspection is static and bounded, not an exhaustive secret scan
+  provisional_executor_disposition: PENDING_POST_BUNDLE_CHECK
+  fresh_Pro_adjudication_required: true
