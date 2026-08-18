@@ -1,0 +1,59 @@
+product_and_permission_receipt:
+  run_id: MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-V2A-SENTINEL-001
+  package_id: MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-V2A-SENTINEL-PACKAGE-003
+  product_surface:
+    value: standard_ChatGPT_conversation_with_GitHub_connector
+    evidence_class: operator_task_surface_plus_successful_GitHub_connector_reads
+  model_selection_authorization:
+    Owner_authorized_label: "gpt-5.6 sol extra high"
+    Owner_authorization_evidence_class: direct_user_instruction
+    Owner_authorization_evidence_ref: current_conversation_owner_G2A_startup_message
+    operator_selected_label: "gpt-5.6 sol extra high"
+    operator_selection_evidence_class: operator_reported
+    operator_selection_evidence_ref: current_conversation_owner_G2A_startup_message
+    exact_match: true
+    reasoning_setting_component_verbatim: "extra high"
+    limitations:
+      - selected label was reported verbatim by the operator in the current startup message; no provider-signed UI telemetry was exposed
+      - reasoning-setting component is preserved as an exact substring of the reported visible label rather than an independent UI field
+  backend:
+    status: unknown_or_not_attestable
+    reason: consumer_chat_surface
+  GitHub:
+    connector_available: true
+    authenticated_actor: "08822407d"
+    observed_read_capability:
+      - repository_metadata
+      - branch_and_ref_read
+      - file_and_blob_read
+      - pull_request_search_and_read
+      - commit_read
+    observed_write_capability:
+      - create_branch
+      - create_file
+    write_capability_evidence:
+      controller_branch_created: true
+      exact_parent: e8e3296922185b4b70997c2351d6f39423f2cd4f
+    physical_capability_does_not_expand_task_authority: true
+  task_authority:
+    authorized:
+      - create_only_v2a-sentinel-001-controller_from_exact_parent
+      - write_only_seven_frozen_A0_result_paths_on_controller_branch
+      - read_public_synthetic_fixture_at_exact_frozen_ref
+      - perform_read_only_before_after_ref_and_lineage_checks
+    prohibited:
+      - write_Mnemosyne
+      - write_Meta_Agent
+      - write_or_access_real_target
+      - modify_validation_master
+      - modify_fixture_or_any_tlr-v1-ref
+      - create_worker_or_fixture_branch
+      - create_PR
+      - run_A1_to_A7
+      - run_V2_B_or_V2_C
+      - use_Web_Deep_Research_Fable_other_app_private_material_or_external_quota
+      - repair_package_refresh_expected_values_substitute_model_or_retry
+  unselected_tools_or_external_quota_used: []
+  automatic_retry_performed: false
+  hidden_continuation_performed: false
+  receipt_result: PASS
