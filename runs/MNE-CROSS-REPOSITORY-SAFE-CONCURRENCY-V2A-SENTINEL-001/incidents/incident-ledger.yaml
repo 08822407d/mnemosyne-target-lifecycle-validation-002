@@ -1,0 +1,26 @@
+incident_ledger:
+  run_id: MNE-CROSS-REPOSITORY-SAFE-CONCURRENCY-V2A-SENTINEL-001
+  incidents:
+    - incident_id: A0-TOOL-001
+      class: tool_or_product_limitation
+      phase: read_only_preflight
+      operation: GitHub.fetch_batch_branch_list_shortcut
+      requested_resource: validation_repository_branches_collection_with_per_page_100
+      observed_result: INVALID_ARGUMENT_HTTP_400_connector_URL_not_allowed_for_this_fetch_action
+      repository_side_effect: none
+      retry_performed: false
+      repair_or_expected_value_refresh_performed: false
+      substitute_model_or_tool_surface_used: false
+      bounded_resolution:
+        method: use already-supported GitHub.search_branches inventory plus individual read-only branch endpoints
+        required_evidence_recovered: true
+        V1_inventory_exact_names_and_SHAs_verified: true
+      impact: non_blocking_bounded_tool_surface_defect_for_fresh_Pro_review
+  confirmed_none: false
+  known_detection_limitations:
+    - GitHub observations do not constitute a platform-global lock against an unrelated external actor writing after a check
+    - fixture material classification is static and bounded; no exhaustive secret scan was executed
+    - hidden model backend identity is unknown_or_not_attestable
+    - operator-selected visible model label is evidenced by the current-message operator report rather than provider-signed UI telemetry
+  prohibited_side_effects_observed: []
+  automatic_retry_performed: false
