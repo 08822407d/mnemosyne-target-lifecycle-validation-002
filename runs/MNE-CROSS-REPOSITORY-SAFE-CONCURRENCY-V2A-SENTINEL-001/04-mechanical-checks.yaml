@@ -10,16 +10,41 @@ mechanical_checks:
   S7_V1_ref_inventory: PASS
   S8_controller_lineage_absence: PASS
   S9_controller_branch_parent: PASS
-  S10_exact_output_path_set: PENDING_POST_BUNDLE_CHECK
-  S11_output_completeness_and_identities: PENDING_POST_BUNDLE_CHECK
-  S12_validation_refs_unchanged: PENDING_POST_BUNDLE_CHECK
-  S13_external_refs_unchanged: PENDING_POST_BUNDLE_CHECK
-  S14_no_worker_branch_or_PR: PENDING_POST_BUNDLE_CHECK
+  S10_exact_output_path_set: PASS
+  S11_output_completeness_and_identities: PASS
+  S12_validation_refs_unchanged: PASS
+  S13_external_refs_unchanged: PASS
+  S14_no_worker_branch_or_PR: PASS
   S15_material_safety: PASS
   S16_no_unselected_tools_or_quota: PASS
   S17_no_hidden_continuation: PASS
   S18_bounded_claim_discipline: PASS
-  S19_final_stop_state: PENDING_FINAL_STOP
+  S19_final_stop_state: PASS
+  S10_evidence:
+    changed_path_count_at_seven_file_bundle: 7
+    changed_paths_exactly_equal_parent_package_002_allowlist: true
+    unexpected_paths: []
+    eighth_output_created: false
+  S11_evidence:
+    required_output_count: 7
+    observed_output_count: 7
+    all_required_paths_present: true
+    final_blob_identities_completed_by_same-path_finalization_and_external_handoff: true
+  S12_evidence:
+    validation_master_unchanged: true
+    frozen_tlr_v1_name_set_unchanged: true
+    frozen_tlr_v1_heads_unchanged: true
+    fixture_tree_unchanged: true
+  S13_evidence:
+    Mnemosyne_master_before: 9b5a3a16d83f6cabc341445d70d350e3391d1daf
+    Mnemosyne_master_after: 9b5a3a16d83f6cabc341445d70d350e3391d1daf
+    Meta_Agent_master_before: 1fdbd7af9437f72f7c8106714ad1e64908983fb7
+    Meta_Agent_master_after: 1fdbd7af9437f72f7c8106714ad1e64908983fb7
+  S14_evidence:
+    branches_matching_v2a_sentinel_001: [v2a-sentinel-001-controller]
+    worker_or_fixture_branches_created: []
+    validation_open_PRs: []
+    controller_or_run_id_PRs: []
   model_selection_binding:
     Owner_authorized_visible_label: "gpt-5.6 sol extra high"
     operator_selected_visible_label: "gpt-5.6 sol extra high"
@@ -32,7 +57,18 @@ mechanical_checks:
     classification: tool_or_product_limitation
     required_evidence_recovered_without_retry: true
     repository_side_effect: none
+    automatic_retry_performed: false
     fresh_Pro_review_required: true
-  all_mandatory_checks_accounted_for: false_pending_post_bundle_checks
+  final_stop_contract:
+    substantive_cells_executed: [A0]
+    A1_to_A7_executed: false
+    V2_B_executed: false
+    V2_C_executed: false
+    finalization_remaining_after_this_record:
+      - update_existing_05-sentinel-result-bundle.yaml_only
+      - perform_required_read_only_final_verification
+      - return_external_handoff_and_stop
+    further_repository_writes_after_05_finalization: prohibited
+  all_mandatory_checks_accounted_for: true
   disputed_checks: []
-  overall_mechanical_disposition: PENDING_POST_BUNDLE_CHECK
+  overall_mechanical_disposition: SENTINEL_PASS_WITH_BOUNDED_DEFECTS_FOR_PRO_REVIEW
