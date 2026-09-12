@@ -1,5 +1,6 @@
 TestId=GH-WRITE-CHECK-20260912-ca0e3982
-Marker=public-write-ca0e3982-v1
+Marker=public-write-ca0e3982-v2
 Scope=User-authorized GitHub connector capability test
 Payload=Harmless diagnostic text only; no private project content
 Target=Isolated capability-test branch, not master
+PreviousVersionReadBack=True
